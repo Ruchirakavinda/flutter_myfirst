@@ -22,11 +22,23 @@ class MyHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("MyFirst"),
+          backgroundColor: Colors.brown,
+          centerTitle: true,
+          title:Text("MyFirst"),
+          leading: IconButton(
+            icon:Icon(Icons.menu), onPressed: () {  } ,),
+            actions: [
+              IconButton(
+              icon:Icon(Icons.search), onPressed: () {  } ,),
+              IconButton(
+              icon: new Image.asset("assests/girl.png",fit: BoxFit.cover,), onPressed: () {},
+              ),
+              ],
+              flexibleSpace: Image.asset("assests/wb.jpg",fit: BoxFit.cover,),
         ),
         body: Center(
-          child: Text("Hello World",
-          style: TextStyle(fontSize: 50.0,color: Colors.blue,),
+          child: Text("Home Page",
+          style: TextStyle(fontSize: 50.0,color: Colors.brown,),
           ),
         ),
       );
