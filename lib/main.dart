@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 void main(){
@@ -30,11 +32,21 @@ class MyHome extends StatelessWidget {
             actions: [
               IconButton(
               icon:Icon(Icons.search), onPressed: () {  } ,),
-              IconButton(
-              icon: new Image.asset("assests/girl.png",fit: BoxFit.cover,), onPressed: () {},
-              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 10.0),
+                child: CircleAvatar(
+                  radius: 15.0,
+                  backgroundImage: AssetImage("assests/girl.png"),
+                  
+                ),
+              )
               ],
               flexibleSpace: Image.asset("assests/wb.jpg",fit: BoxFit.cover,),
+              bottom: PreferredSize(
+                child: Container(),
+                preferredSize: Size.fromHeight(70.0),
+
+              ),
         ),
         body: Center(
           child: Text("Home Page",
