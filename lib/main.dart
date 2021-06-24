@@ -9,6 +9,11 @@ class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+        brightness: Brightness.light,
+      ),
       home: MyHome(),
     );
     // throw UnimplementedError();
@@ -24,10 +29,10 @@ class MyHome extends StatelessWidget {
       length: 4,
       child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.brown,
+            backgroundColor: Colors.teal,
             title:Text("MyFirst"),
             leading: IconButton(
-              icon:Icon(Icons.menu), onPressed: () {  } ,),
+              icon:Icon(Icons.menu,size: 30.0,), onPressed: () {  } ,),
               actions: [
                 IconButton(
                 icon:Icon(Icons.search), onPressed: () {  } ,),
@@ -40,35 +45,53 @@ class MyHome extends StatelessWidget {
                       ),
                       )
                       ],
-                flexibleSpace: Image.asset(
-                  "assests/wb.jpg",fit: BoxFit.cover,
-                  ),
+                      
+                // flexibleSpace: Image.asset(
+                //   "assests/wb.jpg",fit: BoxFit.cover,
+                //   ),
                   bottom: TabBar(
+                    // indicatorWeight: 3.0,
+                    // indicatorColor: Colors.black,
+                    labelColor: Colors.teal,
+                    unselectedLabelColor: Colors.white,
+                    indicator: BoxDecoration(
+                    // gradient: LinearGradient(
+                    //     colors: [Colors.redAccent, Colors.orangeAccent]),
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        topRight: Radius.circular(10)),
+                    // color: Colors.redAccent
+                    ),
                     tabs: [
-                      Tab(icon: Icon(Icons.home),),
-                      Tab(icon: Icon(Icons.message),),
-                      Tab(icon: Icon(Icons.notifications),),
-                      Tab(icon: Icon(Icons.settings),),
+                      Tab(icon: Icon(Icons.home,size: 28.0,),),
+                      Tab(icon: Icon(Icons.library_books,size: 28.0,),),
+                      Tab(icon: Icon(Icons.notifications,size: 28.0,),),
+                      Tab(icon: Icon(Icons.message,size: 28.0,),),
+                      
                     ],
-                  )
+                  ),
+                elevation: 0.0,
+                shadowColor: Colors.black,
                 // PreferredSize(
                 //   child: Container(),
                 //   preferredSize: Size.fromHeight(70.0,),
                 // ),
           ),
-       body: TabBarView(
-         children: [
-           Tab1(),
-           Tab2(),
-           Tab3(),
-           Tab4(),
-         ],
+           body: TabBarView(
+            children: [
+              Tab1(),
+              Tab2(),
+              Tab3(),
+              Tab4(),
+            ],
          ),
         ),
     );
   }
 }
 
+// ignore: non_constant_identifier_names
 Widget Tab1(){
   return Container(
     child: Center(
@@ -78,15 +101,17 @@ Widget Tab1(){
   );
 }
 
+// ignore: non_constant_identifier_names
 Widget Tab2(){
   return Container(
     child: Center(
-      child: Text("Messages"),
+      child: Text("Library"),
       ),
       
   );
 }
 
+// ignore: non_constant_identifier_names
 Widget Tab3(){
   return Container(
     child: Center(
@@ -96,10 +121,11 @@ Widget Tab3(){
   );
 }
 
+// ignore: non_constant_identifier_names
 Widget Tab4(){
   return Container(
     child: Center(
-      child: Text("Settings"),
+      child: Text("Messages"),
       ),
       
   );
