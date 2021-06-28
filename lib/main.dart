@@ -59,8 +59,8 @@ class MyHome extends StatelessWidget {
                     //     colors: [Colors.redAccent, Colors.orangeAccent]),
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(10),
-                        topRight: Radius.circular(10)),
+                        topLeft: Radius.circular(5),
+                        topRight: Radius.circular(5)),
                     // color: Colors.redAccent
                     ),
                     tabs: [
@@ -78,14 +78,31 @@ class MyHome extends StatelessWidget {
                 //   preferredSize: Size.fromHeight(70.0,),
                 // ),
           ),
-           body: TabBarView(
-            children: [
-              Tab1(),
-              Tab2(),
-              Tab3(),
-              Tab4(),
-            ],
-         ),
+        //    body: TabBarView(
+        //     children: [
+        //       Tab1(),
+        //       Tab2(),
+        //       Tab3(),
+        //       Tab4(),
+        //     ],
+        //  ),
+        body: Container(
+          color: Colors.white,
+          child: Container(
+            width: double.infinity,
+            height: 200.0,
+            margin: EdgeInsets.fromLTRB(10, 20, 10, 10),
+              child: Center(
+                child: Text('First Container',
+                style: TextStyle(color: Colors.black,fontSize: 20.0,fontWeight: FontWeight.w600),
+                ),
+              ),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: Colors.grey[300],
+            ),
+          ),
+        ),
         ),
     );
   }
