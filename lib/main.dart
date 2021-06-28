@@ -35,7 +35,7 @@ class MyHome extends StatelessWidget {
               icon:Icon(Icons.menu,size: 30.0,), onPressed: () {  } ,),
               actions: [
                 IconButton(
-                icon:Icon(Icons.search), onPressed: () {  } ,),
+                icon:Icon(Icons.more_vert), onPressed: () {  } ,),
                 Padding(
                   padding: const EdgeInsets.only(right: 10.0),
                   child: CircleAvatar(
@@ -111,43 +111,38 @@ class MyHome extends StatelessWidget {
 
 // ignore: non_constant_identifier_names
 Widget Tab1(){
-  return Column(
-    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    crossAxisAlignment: CrossAxisAlignment.center,
-           children: <Widget> [
-             Container(
-               color: Colors.grey[400],
-               margin: EdgeInsets.all(10.0),
-               width: 300.0,
-               height: 200.0,
-               alignment: Alignment.center,
-               child: Text("First Container",
-               style: TextStyle(color: Colors.black,fontSize: 20.0,fontWeight: FontWeight.w600),
-               ),
-             ),
-             Container(
-               color: Colors.grey[300],
-               margin: EdgeInsets.all(10.0),
-               width: 300.0,
-               height: 200.0,
-               alignment: Alignment.center,
-               child: Text("second Container",
-               style: TextStyle(color: Colors.black,fontSize: 20.0,fontWeight: FontWeight.w600),
-               ),
-             ),
-             
-             Container(
-               color: Colors.grey[300],
-               margin: EdgeInsets.all(10.0),
-               width: 300.0,
-               height: 200.0,
-               alignment: Alignment.center,
-               child: Text("Third Container",
-               style: TextStyle(color: Colors.black,fontSize: 20.0,fontWeight: FontWeight.w600),
-               ),
-             ),
-           ],
-         );
+  return Container(
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children:<Widget> [
+        Column(
+          children:<Widget> [
+            Container(
+              margin: EdgeInsets.all(20.0),
+              child:Text(
+                 "News Feed",
+                 style: TextStyle(
+                   fontSize: 20.0,fontWeight: FontWeight.w700,
+                   ),
+                   )
+                   ),
+          ],
+        ),
+
+        Container(
+          margin: EdgeInsets.all(10.0),
+          child: Column(
+            children:<Widget> [
+              FloatingActionButton(
+                child: Icon(Icons.search,size: 28,),
+                onPressed: (){},
+               )
+            ],
+          ),
+        )
+      ],
+    ),
+  );
 }
 
 // ignore: non_constant_identifier_names
