@@ -29,21 +29,24 @@ class MyHome extends StatelessWidget {
       length: 4,
       child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.teal,
-            title:Text("MyFirst"),
-            leading: IconButton(
-              icon:Icon(Icons.menu,size: 30.0,), onPressed: () {  } ,),
+            backgroundColor: Colors.teal[700],
+            title:Text("My First",style: TextStyle(fontSize: 25.0,),),
+            // leading: IconButton(
+            //   icon:Icon(Icons.menu,size: 30.0,), onPressed: () {  } ,),
               actions: [
-                IconButton(
-                icon:Icon(Icons.more_vert), onPressed: () {  } ,),
                 Padding(
-                  padding: const EdgeInsets.only(right: 10.0),
-                  child: CircleAvatar(
-                    radius: 15.0,
-                    backgroundImage: AssetImage(
-                      "assests/girl.png"),
-                      ),
-                      )
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: IconButton(
+                  icon:Icon(Icons.menu,size: 35.0,), onPressed: () {  } ,),
+                ),
+                // Padding(
+                //   padding: const EdgeInsets.only(right: 10.0),
+                //   child: CircleAvatar(
+                //     radius: 15.0,
+                //     backgroundImage: AssetImage(
+                //       "assests/girl.png"),
+                //       ),
+                //       )
                       ],
                       
                 // flexibleSpace: Image.asset(
@@ -53,26 +56,27 @@ class MyHome extends StatelessWidget {
                     // indicatorWeight: 3.0,
                     // indicatorColor: Colors.black,
                     labelColor: Colors.teal,
-                    unselectedLabelColor: Colors.white,
+                    unselectedLabelColor: Colors.white70,
                     indicator: BoxDecoration(
                     // gradient: LinearGradient(
                     //     colors: [Colors.redAccent, Colors.orangeAccent]),
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(6),
-                        topRight: Radius.circular(6)),
+                        topLeft: Radius.circular(10),
+                        topRight: Radius.circular(10)),
                     // color: Colors.redAccent
                     ),
                     tabs: [
                       Tab(icon: Icon(Icons.home,size: 28.0,),),
-                      Tab(icon: Icon(Icons.library_books,size: 28.0,),),
+                      Tab(icon: Icon(Icons.account_circle_sharp,size: 28.0,),),
                       Tab(icon: Icon(Icons.notifications,size: 28.0,),),
-                      Tab(icon: Icon(Icons.message,size: 28.0,),),
+                      Tab(icon: Icon(Icons.library_books,size: 30.0,),),
                       
                     ],
                   ),
                 elevation: 0.0,
                 shadowColor: Colors.black,
+                
                 // PreferredSize(
                 //   child: Container(),
                 //   preferredSize: Size.fromHeight(70.0,),
@@ -112,34 +116,107 @@ class MyHome extends StatelessWidget {
 // ignore: non_constant_identifier_names
 Widget Tab1(){
   return Container(
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children:<Widget> [
-        Column(
+    child: Column(
+      children: [
+
+        //ROW01
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children:<Widget> [
+            Column(
+              children:<Widget> [
+                Container(
+                  margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                  child:Text(
+                     "News Feed",
+                     style: TextStyle(
+                       fontSize:25.0 ,fontWeight: FontWeight.w700,
+                       ),
+                       )
+                       ),
+              ],
+            ),
+
             Container(
-              margin: EdgeInsets.all(20.0),
-              child:Text(
-                 "News Feed",
-                 style: TextStyle(
-                   fontSize: 20.0,fontWeight: FontWeight.w700,
-                   ),
-                   )
-                   ),
+              margin: EdgeInsets.all(10.0),
+              child: Column(
+                children:<Widget> [
+                  FloatingActionButton(
+                    backgroundColor: Colors.grey.withOpacity(0.2),
+                    mini: true,
+                    elevation: 0.0,
+                    child: Icon(Icons.search,size: 25,color: Colors.black,),
+                    onPressed: (){},
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        Divider(
+                  color: Colors.black.withOpacity(0.1),
+                  height: 0,
+                  thickness: 3,
+                  indent: 20,
+                  endIndent: 20,
+                
+                ),
+        //ROW02
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children:<Widget> [
+            Column(
+              children: [
+                Row(
+                  children:<Widget> [
+                    Container(
+                    width: 40,
+                    height: 40,
+                    margin: EdgeInsets.fromLTRB(20,15,0,0),
+                    decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image: AssetImage(
+                          "assests/girl.png"),
+                      fit: BoxFit.fill
+                    ),
+                    ),
+                  ),
+
+                  Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 10, 0,0),
+                      child: Text("Ruchira Kavinda",style: TextStyle(
+                        fontSize:18.0 ,fontWeight: FontWeight.w700,)),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 0, 0,0),
+                      child: Text("Just Now..",style: TextStyle(
+                        fontSize:15.0 ,)),
+                    )
+                  ],
+                  ),
+                 ],
+               ),
+              ],
+            ),
+
+          Column(
+            children: [
+              IconButton(
+                  icon:Icon(Icons.more_vert,size: 35.0,), onPressed: () {  } ,),
+            ],
+          )
+
           ],
         ),
 
-        Container(
-          margin: EdgeInsets.all(10.0),
-          child: Column(
-            children:<Widget> [
-              FloatingActionButton(
-                child: Icon(Icons.search,size: 28,),
-                onPressed: (){},
-               )
-            ],
-          ),
-        )
+      //ROW03
+
+
+
       ],
     ),
   );
@@ -149,7 +226,7 @@ Widget Tab1(){
 Widget Tab2(){
   return Container(
     child: Center(
-      child: Text("Library"),
+      child: Text("Profile"),
       ),
       
   );
