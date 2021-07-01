@@ -230,16 +230,31 @@ Widget Tab1(){
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 10, 20,10),
             child: Container(
-              width: 350.0,
-              height: 200.0,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              image: DecorationImage(
-                image: AssetImage("assests/girl.png"),
-                fit: BoxFit.cover,
+              constraints: BoxConstraints.expand(
+                height: 200.0,
+                width: double.infinity
               ),
+              decoration: BoxDecoration(
+
+                color: Colors.grey,
+              ),
+              child: Image.asset(
+                "assests/girl.png",
+                fit: BoxFit.cover,
+                ),
+              
             ),
-            ),
+            // child: Container(
+            //   width: 350.0,
+            //   height: 200.0,
+            // decoration: BoxDecoration(
+            //   borderRadius: BorderRadius.circular(10),
+            //   image: DecorationImage(
+            //     image: AssetImage("assests/girl.png"),
+            //     fit: BoxFit.cover,
+            //   ),
+            // ),
+            // ),
           ),   
           ],
         ),
@@ -336,7 +351,9 @@ Widget Tab1(){
             children: [
               Padding(
                         padding: const EdgeInsets.fromLTRB(70, 0, 0,20),
-                        child: Text("I need to make body part scrollable.\nHow can i implement that scroll.",style: TextStyle(
+                        child: Text("I need to make body part scrollable.\nHow can i implement that scroll.\n"
+                            "I need to make body part scrollable.",
+                            style: TextStyle(
                           fontSize:15.0 ,)),
                       ),
             ],
