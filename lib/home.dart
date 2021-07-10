@@ -15,7 +15,18 @@ class _MyHomeState extends State<MyHome> {
       length: 4,
       child: Scaffold(
           appBar: AppBar(
-            
+            flexibleSpace: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: [
+                Colors.blue.shade900,
+                Color.fromRGBO(128,0,0,0.9),
+              ],
+            )
+              ),
+            ),
             backgroundColor: Colors.teal[700],
             title:Text("My First",style: TextStyle(fontSize: 25.0,),),
             
@@ -34,8 +45,9 @@ class _MyHomeState extends State<MyHome> {
                 //     backgroundImage: AssetImage(
                 //       "assests/girl.png"),
                 //       ),
-                //       )
-                      ],
+                //       ),
+                ],
+              
                       
                 // flexibleSpace: Image.asset(
                 //   "assests/wb.jpg",fit: BoxFit.cover,
@@ -44,7 +56,7 @@ class _MyHomeState extends State<MyHome> {
                     
                     // indicatorWeight: 3.0,
                     // indicatorColor: Colors.black,
-                    labelColor: Colors.teal,
+                    labelColor: Colors.blue.shade900,
                     unselectedLabelColor: Colors.white70,
                     indicator: BoxDecoration(
                     // gradient: LinearGradient(
