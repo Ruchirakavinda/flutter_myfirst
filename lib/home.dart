@@ -126,6 +126,7 @@ class _tab1State extends State<Tab1> {
 
   List items=["Ruchira","Kavinda"];
   List items2 = ["Just Now","36 m"];
+  List img= ["assests/my.jpg","assests/girl.png"];
 
   @override
   Widget build(BuildContext context) {
@@ -184,14 +185,13 @@ class _tab1State extends State<Tab1> {
                           decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                          image: AssetImage(
-                               "assests/my.jpg"),
+                          image: AssetImage(img[index]),
                                 fit: BoxFit.fill,
                             ),
                           ),
                         ),
                         onTap: (){},
-                        title: Text(items[index]),
+                        title: Text(items[index],style: TextStyle(fontWeight: FontWeight.w500),),
                         subtitle: Text(items2[index]),
                         trailing:Column(
                         children: [
