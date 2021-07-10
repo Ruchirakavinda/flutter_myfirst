@@ -1,5 +1,6 @@
 import 'dart:async';
-
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import "package:flutter/material.dart";
 import 'home.dart';
 
@@ -34,19 +35,31 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(Duration(seconds: 5), ()
     {
-      Navigator.of(context).pushReplacement(
+      Navigator.of(context,).pushReplacement(
         MaterialPageRoute(
           builder: (_) => MyHome()),
       );
 
     });
   }
+  
 
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.teal[700],
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: [
+                Colors.blue.shade900,
+                Color.fromRGBO(128,0,0,0.9),
+              ],
+            )
+          ),
+        
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -57,9 +70,14 @@ class _SplashScreenState extends State<SplashScreen> {
               SizedBox(height: 10.0,),
               Text("Flutter Application",style: TextStyle(fontSize: 15,color: Colors.white70,letterSpacing: 7),),
               SizedBox(height: 40.0,),
-              CircularProgressIndicator(
-                valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+              // CircularProgressIndicator(
+              //   valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+              // )
+              SpinKitThreeBounce(
+                color: Colors.white,
+                size: 30.0,
               )
+              
             ],
           ),
         ),

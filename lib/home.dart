@@ -15,8 +15,21 @@ class _MyHomeState extends State<MyHome> {
       length: 4,
       child: Scaffold(
           appBar: AppBar(
+            flexibleSpace: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: [
+                Colors.blue.shade900,
+                Color.fromRGBO(128,0,0,0.9),
+              ],
+            )
+              ),
+            ),
             backgroundColor: Colors.teal[700],
             title:Text("My First",style: TextStyle(fontSize: 25.0,),),
+            
             // leading: IconButton(
             //   icon:Icon(Icons.menu,size: 30.0,), onPressed: () {  } ,),
               actions: [
@@ -32,16 +45,18 @@ class _MyHomeState extends State<MyHome> {
                 //     backgroundImage: AssetImage(
                 //       "assests/girl.png"),
                 //       ),
-                //       )
-                      ],
+                //       ),
+                ],
+              
                       
                 // flexibleSpace: Image.asset(
                 //   "assests/wb.jpg",fit: BoxFit.cover,
                 //   ),
                   bottom: TabBar(
+                    
                     // indicatorWeight: 3.0,
                     // indicatorColor: Colors.black,
-                    labelColor: Colors.teal,
+                    labelColor: Colors.blue.shade900,
                     unselectedLabelColor: Colors.white70,
                     indicator: BoxDecoration(
                     // gradient: LinearGradient(
@@ -115,42 +130,85 @@ class _tab1State extends State<Tab1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(
-        itemCount:items.length,
-        itemBuilder:(context, index)
-        {
-          return Column(
-            children: [
-              ListTile(
-                leading:Container(
-                  width: 50,
-                  height: 50,
-                  margin: EdgeInsets.fromLTRB(0,0,0,0),
-                  decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                  image: AssetImage(
-                       "assests/my.jpg"),
-                        fit: BoxFit.fill,
-                    ),
-                  ),
-                ),
-                onTap: (){},
-                title: Text(items[index]),
-                subtitle: Text(items2[index]),
-                trailing:Column(
-                children: [
-                  IconButton(
-                    icon:Icon(Icons.more_horiz,size: 35.0,), onPressed: () {  } ,
+      body: Container(
+        child: Column(
+          children: [
+
+            Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children:<Widget> [
+              Column(
+                children:<Widget> [
+                  Container(
+                    margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                    child:Text(
+                       "News Feed",
+                       style: TextStyle(
+                         fontSize:25.0 ,fontWeight: FontWeight.w700,
+                         ),
+                         )
+                         ),
+                ],
+              ),
+            Container(
+                margin: EdgeInsets.all(10.0),
+                child: Column(
+                  children:<Widget> [
+                    FloatingActionButton(
+                      backgroundColor: Colors.grey.withOpacity(0.2),
+                      mini: true,
+                      elevation: 0.0,
+                      child: Icon(Icons.search,size: 25,color: Colors.black,),
+                      onPressed: (){},
                     ),
                   ],
                 ),
               ),
-            ],
-          );
-        },
-      ),
 
+            ],
+            ),
+
+
+            Expanded(
+              child: ListView.builder(
+                itemCount:items.length,
+                itemBuilder:(context, index)
+                {
+                  return Column(
+                    children: [
+                      ListTile(
+                        leading:Container(
+                          width:45.0,
+                          height:45.0,
+                          margin: EdgeInsets.fromLTRB(0,0,0,0),
+                          decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                          image: AssetImage(
+                               "assests/my.jpg"),
+                                fit: BoxFit.fill,
+                            ),
+                          ),
+                        ),
+                        onTap: (){},
+                        title: Text(items[index]),
+                        subtitle: Text(items2[index]),
+                        trailing:Column(
+                        children: [
+                          IconButton(
+                            icon:Icon(Icons.more_horiz,size: 35.0,), onPressed: () {  } ,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
