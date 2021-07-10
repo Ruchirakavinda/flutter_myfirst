@@ -125,7 +125,7 @@ class Tab1 extends StatefulWidget {
 class _tab1State extends State<Tab1> {
 
   List items=["Ruchira","Kavinda"];
-  List items2 = ["Just Now","Just Now"];
+  List items2 = ["Just Now","36 m"];
 
   @override
   Widget build(BuildContext context) {
