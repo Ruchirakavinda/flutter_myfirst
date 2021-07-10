@@ -2,7 +2,6 @@ import 'dart:async';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import "package:flutter/material.dart";
-import 'package:page_transition/page_transition.dart';
 import 'home.dart';
 
 
