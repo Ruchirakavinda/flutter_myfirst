@@ -2,6 +2,7 @@ import 'dart:async';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import "package:flutter/material.dart";
+import 'package:myfirst/login.dart';
 import 'home.dart';
 
 
@@ -37,7 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
     {
       Navigator.of(context,).pushReplacement(
         MaterialPageRoute(
-          builder: (_) => MyHome()),
+          builder: (_) => Login()),
       );
 
     });
