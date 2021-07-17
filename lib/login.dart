@@ -20,7 +20,7 @@ Widget _username() {
                 padding: const EdgeInsets.fromLTRB(30,10,30,10),
                 child: Card(
                     shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(100), // if you need this
+                    borderRadius: BorderRadius.circular(10), // if you need this
                     side: BorderSide(
                       color: Colors.white.withOpacity(0.5),
                       width: 1,
@@ -40,7 +40,7 @@ Widget _username() {
                                 border: InputBorder.none,
                                 hintText: 'Username',
                                 hintStyle: TextStyle(
-                                  color: Colors.white, 
+                                  color: Colors.white.withOpacity(0.7), 
                                   fontStyle: FontStyle.italic,
                                   fontSize: 18),
                                 
@@ -73,7 +73,7 @@ Widget _password() {
                 padding: const EdgeInsets.fromLTRB(30,10,30,10),
                 child: Card(
                     shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(100), // if you need this
+                    borderRadius: BorderRadius.circular(10), // if you need this
                     side: BorderSide(
                       color: Colors.white.withOpacity(0.5),
                       width: 1,
@@ -94,7 +94,7 @@ Widget _password() {
                                 border: InputBorder.none,
                                 hintText: 'Password',
                                 hintStyle: TextStyle(
-                                  color: Colors.white, 
+                                  color: Colors.white.withOpacity(0.7), 
                                   fontStyle: FontStyle.italic,
                                   fontSize: 18),
                                 
@@ -120,6 +120,9 @@ Widget _password() {
              );
 }
 
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -141,7 +144,7 @@ Widget _password() {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text("My First",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 30.0,),),
-               SizedBox(height: 10.0,),
+              SizedBox(height: 10.0,),
               Text("Flutter Application",style: TextStyle(fontSize: 15,color: Colors.white70,letterSpacing: 7),),
               SizedBox(height: 40,),
     
@@ -153,24 +156,38 @@ Widget _password() {
                     _password(),
 
                     SizedBox(
-                      height: 40,
+                      height: 30,
                     ),
 
                     Container(
-                      child: RaisedButton(
-                        child: Text('Log In'),
-                        onPressed: (){
-                          if(_formKey.currentState!.validate()){
-                            _formKey.currentState!.save();
-                            print(_uname);
-                          }
-                          
-                        },),
-                    )
+                        child: MaterialButton(
+                          splashColor: Colors.white38,
+                          shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(100)),
+                          color: Colors.white.withOpacity(0.8),
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(60,10,60,10),
+                            child: Text('Log In', style: TextStyle(fontSize: 22,color: Colors.black),),
+                          ),
+                          onPressed: (){
+                            if(_formKey.currentState!.validate()){
+                              _formKey.currentState!.save();
+                              print(_uname);
+                            }
+                          },
+                        ),
+                      ),
+                    
                   ],
                 )
     
               ),
+
+              SizedBox(
+                height: 30,
+              ),
+
+              // Text("Already Have an Account?",style: TextStyle(fontSize: 18,color: Colors.white),)
             ],
           ),
         ),
