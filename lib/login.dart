@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'signup.dart';
 
 
 class Login extends StatefulWidget {
@@ -198,7 +199,26 @@ Widget _password() {
                 height: 30,
               ),
 
-              // Text("Already Have an Account?",style: TextStyle(fontSize: 18,color: Colors.white),)
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Already Haven't an Account?",
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.white),
+                    ),
+                    FlatButton(
+                      onPressed: (){
+                        Navigator.push(context, 
+                        MaterialPageRoute(builder: (context)=> Signup()));
+                    }, 
+                    child:Text('Sign Up',style: TextStyle(color: Colors.white,fontSize: 18),))
+                ],
+                )
+
+
+            
             ],
           ),
         ),
