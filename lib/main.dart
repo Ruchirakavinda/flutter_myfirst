@@ -36,9 +36,8 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(Duration(seconds: 5), ()
     {
-      Navigator.of(context,).pushReplacement(
-        MaterialPageRoute(
-          builder: (_) => Login()),
+      Navigator.push(context, 
+      MaterialPageRoute(builder: (context)=> Login()),
       );
 
     });
@@ -55,8 +54,8 @@ class _SplashScreenState extends State<SplashScreen> {
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
               colors: [
-                Colors.blue.shade900,
-                Color.fromRGBO(128,0,0,0.9),
+                Colors.teal.shade700,
+                Colors.black,
               ],
             )
           ),
