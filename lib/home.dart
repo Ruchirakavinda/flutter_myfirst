@@ -22,13 +22,18 @@ class _MyHomeState extends State<MyHome> {
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
               colors: [
-                Colors.blue.shade900,
-                Color.fromRGBO(128,0,0,0.9),
+              Colors.teal.shade700,
+              Colors.black,
               ],
             )
               ),
             ),
             backgroundColor: Colors.teal[700],
+            leading: Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: IconButton(
+                  icon:Icon(Icons.menu_open_rounded,size: 35.0,), onPressed: () {  } ,),
+                ),
             title:Text("My First",style: TextStyle(fontSize: 25.0,),),
             
             // leading: IconButton(
@@ -37,7 +42,7 @@ class _MyHomeState extends State<MyHome> {
                 Padding(
                   padding: const EdgeInsets.only(right: 8.0),
                   child: IconButton(
-                  icon:Icon(Icons.menu,size: 35.0,), onPressed: () {  } ,),
+                  icon:Icon(Icons.message_sharp,size: 25.0,color: Colors.white.withOpacity(0.7),), onPressed: () {  } ,),
                 ),
                 // Padding(
                 //   padding: const EdgeInsets.only(right: 10.0),
@@ -57,7 +62,7 @@ class _MyHomeState extends State<MyHome> {
                     
                     // indicatorWeight: 3.0,
                     // indicatorColor: Colors.black,
-                    labelColor: Colors.blue.shade900,
+                    labelColor:Colors.teal.shade800,
                     unselectedLabelColor: Colors.white70,
                     indicator: BoxDecoration(
                     // gradient: LinearGradient(

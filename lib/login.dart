@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myfirst/home.dart';
 import 'signup.dart';
 
 
@@ -135,8 +136,10 @@ Widget _password() {
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
             colors: [
-              Colors.blue.shade900,
-              Color.fromRGBO(128,0,0,0.9),
+              // Colors.blue.shade900,
+              // Color.fromRGBO(128,0,0,0.9),
+              Colors.teal.shade700,
+              Colors.black,
             ]
           )
         ),
@@ -184,7 +187,12 @@ Widget _password() {
                           onPressed: (){
                             if(_formKey.currentState!.validate()){
                               _formKey.currentState!.save();
+
+                              Navigator.push(context, 
+                              MaterialPageRoute(builder: (context)=> MyHome()));
+
                               print(_uname);
+                              print(_pwd);
                             }
                           },
                         ),
@@ -196,7 +204,7 @@ Widget _password() {
               ),
 
               SizedBox(
-                height: 30,
+                height: 10,
               ),
 
 
