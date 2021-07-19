@@ -30,7 +30,7 @@ Widget _username() {
                   ),
                   color: Colors.white.withOpacity(0.2),
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(0,0,20,0),
+                    padding: const EdgeInsets.fromLTRB(10,0,20,0),
                       child: Column(
                         children: [
                           Padding(
@@ -84,7 +84,7 @@ Widget _password() {
                   ),
                   color: Colors.white.withOpacity(0.2),
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(0,0,20,0),
+                    padding: const EdgeInsets.fromLTRB(10,0,20,0),
                       child: Column(
                         children: [
                           Padding(
