@@ -10,9 +10,11 @@ class Signup extends StatefulWidget {
 
 class _SignupState extends State<Signup> {
 
-final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+final GlobalKey<FormState> _formKey2 = GlobalKey<FormState>();
 var _uname;
+var _mail;
 var _pwd;
+var _compwd;
 
 Widget _username() {
   return Container(
@@ -28,7 +30,7 @@ Widget _username() {
                   ),
                   color: Colors.white.withOpacity(0.2),
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20,0,20,0),
+                    padding: const EdgeInsets.fromLTRB(0,0,20,0),
                       child: Column(
                         children: [
                           Padding(
@@ -37,6 +39,7 @@ Widget _username() {
                               cursorColor: Colors.white,
                               style: TextStyle(color: Colors.white),
                               decoration: InputDecoration(
+                                prefixIcon: Icon(Icons.person_rounded,color: Colors.white.withOpacity(0.5),),
                                 border: InputBorder.none,
                                 hintText: 'Username',
                                 hintStyle: TextStyle(
@@ -67,6 +70,63 @@ Widget _username() {
 
 
 
+Widget _email() {
+  return Container(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(30,10,30,10),
+                child: Card(
+                    shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10), // if you need this
+                    side: BorderSide(
+                      color: Colors.white.withOpacity(0.5),
+                      width: 1,
+                    ),
+                  ),
+                  color: Colors.white.withOpacity(0.2),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(0,0,20,0),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0,0,0,5),
+                            child: TextFormField(
+                              obscureText: false,
+                              cursorColor: Colors.white,
+                              style: TextStyle(color: Colors.white),
+                              decoration: InputDecoration(
+                                prefixIcon: Icon(Icons.email,color: Colors.white.withOpacity(0.5),),
+                                border: InputBorder.none,
+                                hintText: 'E-mail',
+                                hintStyle: TextStyle(
+                                  color: Colors.white.withOpacity(0.7), 
+                                  fontStyle: FontStyle.italic,
+                                  fontSize: 18),
+                                
+                              ),
+
+                              validator: (text){
+                                if(text!.isEmpty){
+                                  return 'Field Required !';
+                                }
+                                return null;
+                              },
+
+                              onSaved: (text){
+                                _mail = text!;
+                              },
+                              ),
+                          )
+                        ],
+                      ),
+                  ), 
+                ),
+              ), 
+             );
+}
+
+
+
+
 Widget _password() {
   return Container(
               child: Padding(
@@ -81,7 +141,7 @@ Widget _password() {
                   ),
                   color: Colors.white.withOpacity(0.2),
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20,0,20,0),
+                    padding: const EdgeInsets.fromLTRB(0,0,20,0),
                       child: Column(
                         children: [
                           Padding(
@@ -91,6 +151,7 @@ Widget _password() {
                               cursorColor: Colors.white,
                               style: TextStyle(color: Colors.white),
                               decoration: InputDecoration(
+                                prefixIcon: Icon(Icons.email,color: Colors.white.withOpacity(0.5),),
                                 border: InputBorder.none,
                                 hintText: 'Password',
                                 hintStyle: TextStyle(
@@ -109,6 +170,64 @@ Widget _password() {
 
                               onSaved: (text){
                                 _pwd = text!;
+                              },
+                              ),
+                          )
+                        ],
+                      ),
+                  ), 
+                ),
+              ), 
+             );
+}
+
+
+
+
+Widget _compassword() {
+  return Container(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(30,10,30,10),
+                child: Card(
+                    shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10), // if you need this
+                    side: BorderSide(
+                      color: Colors.white.withOpacity(0.5),
+                      width: 1,
+                    ),
+                  ),
+                  color: Colors.white.withOpacity(0.2),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(0,0,20,0),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0,0,0,5),
+                            child: TextFormField(
+                              
+                              obscureText: true,
+                              cursorColor: Colors.white,
+                              style: TextStyle(color: Colors.white),
+                              decoration: InputDecoration(
+                                prefixIcon: Icon(Icons.email,color: Colors.white.withOpacity(0.5),),
+                                border: InputBorder.none,
+                                hintText: 'Confirm Password',
+                                hintStyle: TextStyle(
+                                  color: Colors.white.withOpacity(0.7), 
+                                  fontStyle: FontStyle.italic,
+                                  fontSize: 18),
+                                
+                              ),
+
+                              validator: (text){
+                                if(text!.isEmpty){
+                                  return 'Field Required !';
+                                }
+                                return null;
+                              },
+
+                              onSaved: (text){
+                                _compwd = text!;
                               },
                               ),
                           )
@@ -143,19 +262,22 @@ Widget _password() {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("My First",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 30.0,),),
+              Text("My First",style: 
+              TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 30.0,),),
               SizedBox(height: 10.0,),
-              Text("Flutter Application",style: TextStyle(fontSize: 15,color: Colors.white70,letterSpacing: 7),),
+              Text("Flutter Application",style: 
+              TextStyle(fontSize: 15,color: Colors.white70,letterSpacing: 7),),
               SizedBox(height: 40,),
     
               Form(
-                key: _formKey,
+                key: _formKey2,
                 child:Column(
                   children: [
                     _username(),
+                    _email(),
                     _password(),
-                    _username(),
-                    _password(),
+                    _compassword(),
+                    
 
                     SizedBox(
                       height: 30,
@@ -180,12 +302,16 @@ Widget _password() {
                           color: Colors.white.withOpacity(0.8),
                           child: Padding(
                             padding: const EdgeInsets.fromLTRB(60,10,60,10),
-                            child: Text('Log In', style: TextStyle(fontSize: 22,color: Colors.black),),
+                            child: Text('Sign Up', style: TextStyle(fontSize: 22,color: Colors.black),),
                           ),
                           onPressed: (){
-                            if(_formKey.currentState!.validate()){
-                              _formKey.currentState!.save();
+                            if(_formKey2.currentState!.validate()){
+                              _formKey2.currentState!.save();
                               print(_uname);
+                              print(_mail);
+                              print(_pwd);
+                              print(_compwd);
+
                             }
                           },
                         ),
@@ -204,7 +330,7 @@ Widget _password() {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Already Haven't an Account?",
+                  Text("Already Have an Account?",
                   style: TextStyle(
                     fontSize: 18,
                     color: Colors.white),
@@ -214,7 +340,7 @@ Widget _password() {
                         Navigator.pop(context);                   
 
                     }, 
-                    child:Text('Sign Up',style: TextStyle(color: Colors.white,fontSize: 18),))
+                    child:Text('Sign In',style: TextStyle(color: Colors.white,fontSize: 18),))
                 ],
                 )
 
