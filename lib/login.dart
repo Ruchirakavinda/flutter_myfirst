@@ -30,7 +30,7 @@ Widget _username() {
                   ),
                   color: Colors.white.withOpacity(0.2),
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20,0,20,0),
+                    padding: const EdgeInsets.fromLTRB(0,0,20,0),
                       child: Column(
                         children: [
                           Padding(
@@ -39,6 +39,7 @@ Widget _username() {
                               cursorColor: Colors.white,
                               style: TextStyle(color: Colors.white),
                               decoration: InputDecoration(
+                                prefixIcon: Icon(Icons.person_rounded,color: Colors.white.withOpacity(0.5),),
                                 border: InputBorder.none,
                                 hintText: 'Username',
                                 hintStyle: TextStyle(
@@ -83,7 +84,7 @@ Widget _password() {
                   ),
                   color: Colors.white.withOpacity(0.2),
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20,0,20,0),
+                    padding: const EdgeInsets.fromLTRB(0,0,20,0),
                       child: Column(
                         children: [
                           Padding(
@@ -93,6 +94,7 @@ Widget _password() {
                               cursorColor: Colors.white,
                               style: TextStyle(color: Colors.white),
                               decoration: InputDecoration(
+                                prefixIcon: Icon(Icons.lock,color: Colors.white.withOpacity(0.5),),
                                 border: InputBorder.none,
                                 hintText: 'Password',
                                 hintStyle: TextStyle(
@@ -182,7 +184,7 @@ Widget _password() {
                           color: Colors.white.withOpacity(0.8),
                           child: Padding(
                             padding: const EdgeInsets.fromLTRB(60,10,60,10),
-                            child: Text('Log In', style: TextStyle(fontSize: 22,color: Colors.black),),
+                            child: Text('Sign In', style: TextStyle(fontSize: 22,color: Colors.black),),
                           ),
                           onPressed: (){
                             if(_formKey.currentState!.validate()){
