@@ -300,7 +300,7 @@ Widget _compassword() {
                             ],
                         ),
                         child: MaterialButton(
-                          splashColor: Colors.white38,
+                          splashColor: Colors.teal,
                           shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(100)),
                           color: Colors.white.withOpacity(0.8),
