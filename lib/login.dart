@@ -149,6 +149,9 @@ Widget _password() {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+
+               
+
               Text("My First",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 30.0,),),
               SizedBox(height: 10.0,),
               Text("Flutter Application",style: TextStyle(fontSize: 15,color: Colors.white70,letterSpacing: 7),),
@@ -225,7 +228,51 @@ Widget _password() {
                     }, 
                     child:Text('Sign Up',style: TextStyle(color: Colors.white,fontSize: 18),))
                 ],
-                )
+                ),
+
+
+
+                SizedBox(
+                height: 10,
+              ),
+
+
+
+                Container(
+                  width: MediaQuery.of(context).size.width*0.55,
+                  child: MaterialButton(
+                    
+                            splashColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(200)),
+                            color: Colors.blue.withOpacity(0.7),
+                            child: Row(
+                              
+                              children: [
+                                Container(
+                                      width:30.0,
+                                      height:30.0,
+                                      margin: EdgeInsets.fromLTRB(0,0,0,0),
+                                      decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                      image: AssetImage('assests/ggl.jpg'),
+                                      fit: BoxFit.fill,
+                                  ),
+                                ),
+                              ),
+                                Padding(
+                                padding: const EdgeInsets.fromLTRB(15,15,0,15),
+                                child: Text('Join With Google', style: 
+                                TextStyle(fontSize: 16,color: Colors.white),),
+                              ),
+                              ],
+                            ),
+                            onPressed: (){
+                              },
+                            
+                          ),
+                ),
 
 
             

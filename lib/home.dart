@@ -32,7 +32,7 @@ class _MyHomeState extends State<MyHome> {
             leading: Padding(
                   padding: const EdgeInsets.only(right: 8.0),
                   child: IconButton(
-                  icon:Icon(Icons.menu_open_rounded,size: 35.0,), onPressed: () {  } ,),
+                  icon:Icon(Icons.menu,size: 35.0,), onPressed: () {  } ,),
                 ),
             title:Text("My First",style: TextStyle(fontSize: 25.0,),),
             

@@ -346,7 +346,47 @@ Widget _compassword() {
                     }, 
                     child:Text('Sign In',style: TextStyle(color: Colors.white,fontSize: 18),))
                 ],
-                )
+                ),
+
+
+                SizedBox(height: 10,),
+
+
+                 Container(
+                  width: MediaQuery.of(context).size.width*0.55,
+                  child: MaterialButton(
+                    
+                            splashColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(200)),
+                            color: Colors.blue.withOpacity(0.7),
+                            child: Row(
+                              
+                              children: [
+                                Container(
+                                      width:30.0,
+                                      height:30.0,
+                                      margin: EdgeInsets.fromLTRB(0,0,0,0),
+                                      decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                      image: AssetImage('assests/ggl.jpg'),
+                                      fit: BoxFit.fill,
+                                  ),
+                                ),
+                              ),
+                                Padding(
+                                padding: const EdgeInsets.fromLTRB(15,15,0,15),
+                                child: Text('Join With Google', style: 
+                                TextStyle(fontSize: 16,color: Colors.white),),
+                              ),
+                              ],
+                            ),
+                            onPressed: (){
+                              },
+                            
+                          ),
+                ),
 
 
             
