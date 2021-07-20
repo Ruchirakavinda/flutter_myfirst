@@ -32,7 +32,7 @@ class _MyHomeState extends State<MyHome> {
             leading: Padding(
                   padding: const EdgeInsets.only(right: 8.0),
                   child: IconButton(
-                  icon:Icon(Icons.menu,size: 35.0,), onPressed: () {  } ,),
+                  icon:Icon(Icons.menu,size: 30.0,), onPressed: () {  } ,),
                 ),
             title:Text("My First",style: TextStyle(fontSize: 25.0,),),
             
@@ -42,7 +42,7 @@ class _MyHomeState extends State<MyHome> {
                 Padding(
                   padding: const EdgeInsets.only(right: 8.0),
                   child: IconButton(
-                  icon:Icon(Icons.message_sharp,size: 25.0,color: Colors.white.withOpacity(0.7),), onPressed: () {  } ,),
+                  icon:Icon(Icons.message_sharp,size: 25.0,color: Colors.white.withOpacity(0.9),), onPressed: () {  } ,),
                 ),
                 // Padding(
                 //   padding: const EdgeInsets.only(right: 10.0),
@@ -60,24 +60,24 @@ class _MyHomeState extends State<MyHome> {
                 //   ),
                   bottom: TabBar(
                     
-                    // indicatorWeight: 3.0,
-                    // indicatorColor: Colors.black,
-                    labelColor:Colors.teal.shade800,
+                    indicatorWeight: 5.0,
+                    indicatorColor: Colors.white,
+                    labelColor:Colors.white,
                     unselectedLabelColor: Colors.white70,
-                    indicator: BoxDecoration(
-                    // gradient: LinearGradient(
-                    //     colors: [Colors.redAccent, Colors.orangeAccent]),
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(10),
-                        topRight: Radius.circular(10)),
-                    // color: Colors.redAccent
-                    ),
+                    // indicator: BoxDecoration(
+                    // // gradient: LinearGradient(
+                    // //     colors: [Colors.redAccent, Colors.orangeAccent]),
+                    // color: Colors.white,
+                    // borderRadius: BorderRadius.only(
+                    //     topLeft: Radius.circular(10),
+                    //     topRight: Radius.circular(10)),
+                    // // color: Colors.redAccent
+                    // ),
                     tabs: [
-                      Tab(icon: Icon(Icons.home,size: 28.0,),),
-                      Tab(icon: Icon(Icons.account_circle_rounded,size: 28.0,),),
-                      Tab(icon: Icon(Icons.notifications,size: 28.0,),),
-                      Tab(icon: Icon(Icons.library_books,size: 30.0,),),
+                      Tab(text: 'Home',icon: Icon(Icons.home,size: 22.0,),),
+                      Tab(text: 'Profile',icon: Icon(Icons.account_circle_sharp,size: 22.0,),),
+                      Tab(text: 'Notifications',icon: Icon(Icons.notifications,size: 22.0,),),
+                      Tab(text: 'Library',icon: Icon(Icons.library_books,size: 22.0,),),
                       
                     ],
                   ),
