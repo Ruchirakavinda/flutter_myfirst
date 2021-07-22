@@ -75,7 +75,7 @@ class _MyHomeState extends State<MyHome> {
                     // ),
                     tabs: [
                       Tab(text: 'Home',icon: Icon(Icons.home,size: 22.0,),),
-                      Tab(text: 'Profile',icon: Icon(Icons.account_circle_sharp,size: 22.0,),),
+                      Tab(text: 'Profile',icon: Icon(Icons.person_rounded,size: 22.0,),),
                       Tab(text: 'Notifications',icon: Icon(Icons.notifications,size: 22.0,),),
                       Tab(text: 'Library',icon: Icon(Icons.library_books,size: 22.0,),),
                       

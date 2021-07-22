@@ -9,9 +9,64 @@ class Tab1 extends StatefulWidget {
 
 class _tab1State extends State<Tab1> {
 
-  List items=["Ruchira","Kavinda"];
-  List items2 = ["Just Now","36 m"];
-  List img= ["assests/my.jpg","assests/girl.png"];
+  final GlobalKey<FormState> _form3 = GlobalKey<FormState>();
+
+  List items=["Ruchira Kavinda","Mia Andrus","Sunny Lisa"];
+  List items2 = ["Just Now","36 m","12 h"];
+  List img= ["assests/my.jpg","assests/girl.png","assests/girl.png"];
+
+
+  Widget _username() {
+  return Container(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(30,10,30,10),
+                child: Card(
+                    shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10), // if you need this
+                    side: BorderSide(
+                      color: Colors.white.withOpacity(0.5),
+                      width: 1,
+                    ),
+                  ),
+                  color: Colors.white.withOpacity(0.2),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(10,0,20,0),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0,0,0,5),
+                            child: TextFormField(
+                              cursorColor: Colors.white,
+                              style: TextStyle(color: Colors.white),
+                              decoration: InputDecoration(
+                                prefixIcon: Icon(Icons.person_rounded,color: Colors.white.withOpacity(0.5),),
+                                border: InputBorder.none,
+                                hintText: 'Username',
+                                hintStyle: TextStyle(
+                                  color: Colors.white.withOpacity(0.7), 
+                                  fontStyle: FontStyle.italic,
+                                  fontSize: 18),
+                                
+                              ),
+                              validator: (text){
+                                if(text!.isEmpty){
+                                  return 'Field Required !';
+                                }
+                                return null;
+                              },
+
+                              onSaved: (text){
+                                 
+                              },
+                              ),
+                          )
+                        ],
+                      ),
+                  ), 
+                ),
+              ), 
+             );
+}
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +109,8 @@ class _tab1State extends State<Tab1> {
             ],
             ),
 
+        
+
 
             Expanded(
               child: ListView.builder(
@@ -86,6 +143,106 @@ class _tab1State extends State<Tab1> {
                           ],
                         ),
                       ),
+
+                      ListTile(
+                      title : Container(
+                        width: MediaQuery.of(context).size.width,
+                        height: 250.0,
+                        decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                        image: AssetImage(img[index]),
+                        fit: BoxFit.cover,
+                        ),
+                      ),
+                      ),
+                      ),
+
+
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20,20,20,0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              child: Row(
+                                children: [
+                                  Text("251"),
+                                  Text(" Stars")
+                                ],
+                              ),
+                            ),
+
+                            Container(
+                              child: Row(
+                                children: [
+                                  Text("51"),
+                                  Text(" Comments")
+                                ],
+                              ),
+                            ),
+
+                            Container(
+                              child: Row(
+                                children: [
+                                  Text("25"),
+                                  Text(" Shares")
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+
+
+                      Divider(),
+
+
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(20,0,20,0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            IconButton(
+                              onPressed: (){}, 
+                              icon: Icon(Icons.star,size: 30,color: Colors.black54,)),
+
+                            IconButton(
+                              onPressed: (){}, 
+                              icon: Icon(Icons.comment,size: 30,color: Colors.black54,)),
+
+                            IconButton(
+                            onPressed: (){}, 
+                            icon: Icon(Icons.share,size: 30,color: Colors.black54,))
+                          ],
+
+                          
+                        ),
+                      ),
+
+                      Divider(),
+
+
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20,0,20,0),
+                        child: Row(
+                          children: [
+                            Container(
+                            width:30.0,
+                            height:30.0,
+                            decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                            image: AssetImage(img[index]),
+                                  fit: BoxFit.fill,
+                              ),
+                            ),
+                          ),
+                          
+                          ],
+                        ),
+                      )
+
                     ],
                   );
                 },
