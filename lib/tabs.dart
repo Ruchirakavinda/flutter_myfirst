@@ -9,64 +9,11 @@ class Tab1 extends StatefulWidget {
 
 class _tab1State extends State<Tab1> {
 
-  final GlobalKey<FormState> _form3 = GlobalKey<FormState>();
-
   List items=["Ruchira Kavinda","Mia Andrus","Sunny Lisa"];
   List items2 = ["Just Now","36 m","12 h"];
   List img= ["assests/my.jpg","assests/girl.png","assests/girl.png"];
 
 
-  Widget _username() {
-  return Container(
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(30,10,30,10),
-                child: Card(
-                    shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10), // if you need this
-                    side: BorderSide(
-                      color: Colors.white.withOpacity(0.5),
-                      width: 1,
-                    ),
-                  ),
-                  color: Colors.white.withOpacity(0.2),
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10,0,20,0),
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0,0,0,5),
-                            child: TextFormField(
-                              cursorColor: Colors.white,
-                              style: TextStyle(color: Colors.white),
-                              decoration: InputDecoration(
-                                prefixIcon: Icon(Icons.person_rounded,color: Colors.white.withOpacity(0.5),),
-                                border: InputBorder.none,
-                                hintText: 'Username',
-                                hintStyle: TextStyle(
-                                  color: Colors.white.withOpacity(0.7), 
-                                  fontStyle: FontStyle.italic,
-                                  fontSize: 18),
-                                
-                              ),
-                              validator: (text){
-                                if(text!.isEmpty){
-                                  return 'Field Required !';
-                                }
-                                return null;
-                              },
-
-                              onSaved: (text){
-                                 
-                              },
-                              ),
-                          )
-                        ],
-                      ),
-                  ), 
-                ),
-              ), 
-             );
-}
 
   @override
   Widget build(BuildContext context) {
@@ -74,13 +21,23 @@ class _tab1State extends State<Tab1> {
       body: Container(
         child: Column(
           children: [
+            
+            Expanded(
+              child: ListView.builder(
+                itemCount:items.length,
+                itemBuilder:(context, index)
+                
+                {
+                  return Column(
+                    children: [
 
-            Row(
+                      Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children:<Widget> [
               Column(
                 children:<Widget> [
                   Container(
+                    height: index==0?30:0.0,
                     margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
                     child:Text(
                        "News Feed",
@@ -92,6 +49,7 @@ class _tab1State extends State<Tab1> {
                 ],
               ),
             Container(
+              height: index==0?50:0.0,
                 margin: EdgeInsets.all(10.0),
                 child: Column(
                   children:<Widget> [
@@ -109,16 +67,8 @@ class _tab1State extends State<Tab1> {
             ],
             ),
 
-        
 
 
-            Expanded(
-              child: ListView.builder(
-                itemCount:items.length,
-                itemBuilder:(context, index)
-                {
-                  return Column(
-                    children: [
                       ListTile(
                         leading:Container(
                           width:45.0,
@@ -147,7 +97,7 @@ class _tab1State extends State<Tab1> {
                       ListTile(
                       title : Container(
                         width: MediaQuery.of(context).size.width,
-                        height: 250.0,
+                        height: 250,
                         decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         image: DecorationImage(

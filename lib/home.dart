@@ -16,6 +16,7 @@ class _MyHomeState extends State<MyHome> {
       length: 4,
       child: Scaffold(
           appBar: AppBar(
+            toolbarHeight: 130,
             flexibleSpace: Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
