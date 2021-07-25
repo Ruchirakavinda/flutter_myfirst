@@ -31,49 +31,29 @@ class _MyHomeState extends State<MyHome> {
             ),
             backgroundColor: Colors.teal[700],
             leading: Padding(
-                  padding: const EdgeInsets.only(right: 8.0),
+                  padding: const EdgeInsets.only(left: 10.0),
                   child: IconButton(
                   icon:Icon(Icons.menu,size: 30.0,), onPressed: () {  } ,),
                 ),
             title:Text("My First",style: TextStyle(fontSize: 25.0,),),
             
-            // leading: IconButton(
-            //   icon:Icon(Icons.menu,size: 30.0,), onPressed: () {  } ,),
+          
               actions: [
                 Padding(
                   padding: const EdgeInsets.only(right: 8.0),
                   child: IconButton(
                   icon:Icon(Icons.message_sharp,size: 25.0,color: Colors.white.withOpacity(0.9),), onPressed: () {  } ,),
                 ),
-                // Padding(
-                //   padding: const EdgeInsets.only(right: 10.0),
-                //   child: CircleAvatar(
-                //     radius: 15.0,
-                //     backgroundImage: AssetImage(
-                //       "assests/girl.png"),
-                //       ),
-                //       ),
                 ],
-              
-                      
-                // flexibleSpace: Image.asset(
-                //   "assests/wb.jpg",fit: BoxFit.cover,
-                //   ),
+
+
                   bottom: TabBar(
                     
                     indicatorWeight: 5.0,
                     indicatorColor: Colors.white,
                     labelColor:Colors.white,
                     unselectedLabelColor: Colors.white70,
-                    // indicator: BoxDecoration(
-                    // // gradient: LinearGradient(
-                    // //     colors: [Colors.redAccent, Colors.orangeAccent]),
-                    // color: Colors.white,
-                    // borderRadius: BorderRadius.only(
-                    //     topLeft: Radius.circular(10),
-                    //     topRight: Radius.circular(10)),
-                    // // color: Colors.redAccent
-                    // ),
+                   
                     tabs: [
                       Tab(text: 'Home',icon: Icon(Icons.home,size: 22.0,),),
                       Tab(text: 'Profile',icon: Icon(Icons.person_rounded,size: 22.0,),),
@@ -85,10 +65,7 @@ class _MyHomeState extends State<MyHome> {
                 elevation: 0.0,
                 shadowColor: Colors.black,
                 
-                // PreferredSize(
-                //   child: Container(),
-                //   preferredSize: Size.fromHeight(70.0,),
-                // ),
+                
           ),
            body: TabBarView(
             children: [
@@ -99,23 +76,6 @@ class _MyHomeState extends State<MyHome> {
             ],
          ),
          
-        
-        // Container(
-        //   color: Colors.white,
-        //   child: Container(
-        //     width: double.infinity,
-        //     height: 200.0,
-        //     margin: EdgeInsets.fromLTRB(10, 20, 10, 10),
-        //     alignment: Alignment.center,
-        //     child: Text('First Container',
-        //     style: TextStyle(color: Colors.black,fontSize: 20.0,fontWeight: FontWeight.w600),
-        //     ),
-        //     decoration: BoxDecoration(
-        //       borderRadius: BorderRadius.circular(7),
-        //       color: Colors.grey[300],
-        //     ),
-        //   ),
-        // ),
         ),
     );
   }

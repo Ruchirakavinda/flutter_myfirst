@@ -21,9 +21,12 @@ class _tab1State extends State<Tab1> {
       body: Container(
         child: Column(
           children: [
-            
+
             Expanded(
-              child: ListView.builder(
+              child: ListView.separated(
+                separatorBuilder: (context, index) => Divider(
+                color: Colors.black,height: 50,
+              ),
                 itemCount:items.length,
                 itemBuilder:(context, index)
                 
@@ -31,41 +34,51 @@ class _tab1State extends State<Tab1> {
                   return Column(
                     children: [
 
-                      Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children:<Widget> [
-              Column(
-                children:<Widget> [
-                  Container(
-                    height: index==0?30:0.0,
-                    margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                    child:Text(
-                       "News Feed",
-                       style: TextStyle(
-                         fontSize:25.0 ,fontWeight: FontWeight.w700,
-                         ),
-                         )
-                         ),
-                ],
-              ),
-            Container(
-              height: index==0?50:0.0,
-                margin: EdgeInsets.all(10.0),
-                child: Column(
-                  children:<Widget> [
-                    FloatingActionButton(
-                      backgroundColor: Colors.grey.withOpacity(0.2),
-                      mini: true,
-                      elevation: 0.0,
-                      child: Icon(Icons.search,size: 25,color: Colors.black,),
-                      onPressed: (){},
-                    ),
-                  ],
-                ),
-              ),
+                      Column(
+                        children: [
+                          Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children:<Widget> [
+                            Column(
+                              children:<Widget> [
+                                Container(
+                                  height: index==0?30:0.0,
+                                  margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                                  child:Text(
+                                    "News Feed",
+                                    style: TextStyle(
+                                      fontSize:25.0 ,fontWeight: FontWeight.w700,
+                                      ),
+                                      )
+                                      ),
+                                      
+                              ],
+                            ),
+                          Container(
+                            height: index==0?50:0.0,
+                              margin: EdgeInsets.all(10.0),
+                              child: Column(
+                                children:<Widget> [
+                                  FloatingActionButton(
+                                    backgroundColor: Colors.grey.withOpacity(0.2),
+                                    mini: true,
+                                    elevation: 0.0,
+                                    child: Icon(Icons.search,size: 25,color: Colors.black,),
+                                    onPressed: (){},
+                                  ),
+                                ],
+                              ),
+                            ),
 
-            ],
-            ),
+                          ],
+                          ),
+
+                           Divider(
+                            color: Colors.black,
+                            height: 10,
+                          ),
+                        ],
+                      ),
 
 
 
@@ -173,25 +186,33 @@ class _tab1State extends State<Tab1> {
                       Divider(),
 
 
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(20,0,20,0),
-                        child: Row(
-                          children: [
-                            Container(
-                            width:30.0,
-                            height:30.0,
-                            decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: DecorationImage(
-                            image: AssetImage(img[index]),
-                                  fit: BoxFit.fill,
-                              ),
+                      ListTile(
+                        leading:Container(
+                          width:35.0,
+                          height:35.0,
+                          margin: EdgeInsets.fromLTRB(0,0,0,0),
+                          decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                          image: AssetImage(img[index]),
+                                fit: BoxFit.fill,
                             ),
                           ),
-                          
+                        ),
+                        onTap: (){},
+                        title: Text(items[index],style: TextStyle(fontWeight: FontWeight.w500),),
+                        subtitle: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(items2[index]),
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Text('I need to make body part scrollable.\nHow can i implement that scroll.',style: TextStyle(fontSize: 16,color: Colors.black),),
+                            )
                           ],
                         ),
-                      )
+                        
+                      ),
 
                     ],
                   );
