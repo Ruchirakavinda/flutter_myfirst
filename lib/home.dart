@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:myfirst/tab1.dart';
+import 'package:myfirst/tab2.dart';
+import 'package:myfirst/tab3.dart';
+import 'package:myfirst/tab4.dart';
+
 // import 'package:flutter/rendering.dart';
 
 class MyHome extends StatefulWidget {
@@ -70,9 +74,9 @@ class _MyHomeState extends State<MyHome> {
            body: TabBarView(
             children: [
               Tab1(),
-              Tab1(),
-              Tab1(),
-              Tab1(),
+              Tab2(),
+              Tab3(),
+              Tab4(),
              
             ],
          ),

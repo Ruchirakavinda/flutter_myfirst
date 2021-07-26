@@ -12,6 +12,8 @@ class _Tab1State extends State<Tab1> {
   List name=["Ruchira Kavinda","Mia Andrus","Sunny Lisa"];
   List time = ["Just Now","36 m","12 h"];
   List img= ["assests/my.jpg","assests/girl.png","assests/girl.png"];
+  List story = ["assests/girl.png","assests/girl.png","assests/my.jpg"];
+  static const user = 'assests/my.jpg';
 
 
 
@@ -68,38 +70,89 @@ class _Tab1State extends State<Tab1> {
               SizedBox(
                 height:200,
                 child: ListView.builder(
-                  itemCount: 10,
+                  itemCount: name.length,
                   scrollDirection:Axis.horizontal,
                   itemBuilder:(context,index) => Row(
                     children: [
 
                       Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.teal[900],
+                        image: DecorationImage(
+                          image: AssetImage(user),
+                          fit: BoxFit.cover
+                          ),
+                        ),
                         width: index==0?110:0.0,
                         margin: EdgeInsets.fromLTRB(10,10, index==0?10:0 ,10),
                         child: Center(
                           child:Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
-                              Text("")
+                              Container(
+                              width:45.0,
+                              height:45.0,
+                              margin: EdgeInsets.fromLTRB(0,0,0,0),
+                              decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white
+                              ),
+                              child: IconButton(
+                                icon: Icon(Icons.add_a_photo),
+                                color: Colors.teal[900],
+                                onPressed: () {},
+                              ),
+                            ),
                             ],
                           ),
                           ),
-                        color: Colors.black,
+                        
                       ),
 
 
                       Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.teal[800],
+                          image: DecorationImage(
+                            image: AssetImage(story[index]),
+                            fit: BoxFit.cover
+                            ),
+                            
+                        ),
                         width: 110,
                         margin: EdgeInsets.fromLTRB(0,10,0,10),
                         child: Center(
                           child:Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
-                              Text("Card dgdgfdh $index"),
-                              Text("Card dgdgfdh $index"),
-                              Text("Card dgdgfdh $index"),
+                              Container(
+                              width:45.0,
+                              height:45.0,
+                              margin: EdgeInsets.fromLTRB(0,0,0,0),
+                              decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: DecorationImage(
+                              image: AssetImage(img[index]),
+                                    fit: BoxFit.fill,
+                                ),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.white,
+                                    blurRadius: 0,
+                                    spreadRadius: 2,
+                                    offset: Offset(0, 0), // Shadow position
+                                  ),
+                                ],
+                              ),
+                            ),
+                              
                             ],
                           ),
                           ),
-                        color: Colors.teal[800],
                       ),
                     ],
                   ) 
