@@ -67,6 +67,27 @@ class _Tab1State extends State<Tab1> {
                 color: Colors.grey[300],
               ),
 
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20,0,0,0),
+                    child: Text('Stories', style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700) ,),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0,0,0,0),
+                    // ignore: deprecated_member_use
+                    child: FlatButton(
+                    onPressed: () {  },
+                    child: Text('See All', 
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600) ,)),
+                  ),
+                ],
+              ),
+
               SizedBox(
                 height:200,
                 child: ListView.builder(
@@ -143,7 +164,7 @@ class _Tab1State extends State<Tab1> {
                                   BoxShadow(
                                     color: Colors.white,
                                     blurRadius: 0,
-                                    spreadRadius: 2,
+                                    spreadRadius: 3,
                                     offset: Offset(0, 0), // Shadow position
                                   ),
                                 ],
