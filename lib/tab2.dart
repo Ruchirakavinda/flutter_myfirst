@@ -8,8 +8,13 @@ class Tab2 extends StatefulWidget {
 }
 
 class _tab2State extends State<Tab2> {
+
 final GlobalKey<FormState>_form4 =  GlobalKey<FormState>();
 var _connections;
+
+List req=["Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay","Kevin Gande"];
+List conn=["Mia Andrus","Sunny Lisa","Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay","Kevin Gande","Alon ferdus"];
+List time = ["Just Now","36 m","57 m","12 h","1 d","2 d"];
 
   @override
   Widget build(BuildContext context) {
@@ -78,8 +83,11 @@ var _connections;
                                   
                                 ),
                                 validator: (text){
+                                  if(text!.isEmpty){
                                   return null;
-                                },
+                                }
+                                return null;
+                              },
 
                                 onSaved: (text){
                                   _connections= text!;
@@ -107,7 +115,7 @@ var _connections;
                 children: [
                   Padding(
                     padding: const EdgeInsets.fromLTRB(20,0,0,0),
-                    child: Text('Requests', style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700) ,),
+                    child:Text('${req.length} Requests', style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700) ,),
                   ),
 
                   Padding(
@@ -166,11 +174,14 @@ var _connections;
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text('Ruchira kavinda',
+                                    Text(req[index],
                                     style: TextStyle(fontWeight: FontWeight.w500,fontSize: 17),),
-                                    Text('Just now',
-                                    style:TextStyle(color: Colors.black54)),
+                                   
+                                    Text('United States',
+                                    style:TextStyle(color: Colors.black87)),
 
+                                    Text(time[index],
+                                    style:TextStyle(color: Colors.black54)),
 
                                   ],
                                 ),
@@ -189,7 +200,7 @@ var _connections;
                                         backgroundColor: Colors.teal[800],
                                         mini: true,
                                         elevation: 0.0,
-                                        child: Icon(Icons.done,size: 25,
+                                        child: Icon(Icons.done,size: 20,
                                         color: Colors.white,),
                                         onPressed: (){},
                                       ),
@@ -201,7 +212,7 @@ var _connections;
                                         backgroundColor: Colors.black12,
                                         mini: true,
                                         elevation: 0.0,
-                                        child: Icon(Icons.close,size: 25,
+                                        child: Icon(Icons.close,size: 20,
                                         color: Colors.teal[900],),
                                         onPressed: (){},
                                       ),
@@ -212,38 +223,16 @@ var _connections;
 
                       ],
                     ),
-                  )
-                  
-                  //ListTile(
-                  //       leading:Container(
-                  //             width:45.0,
-                  //             height:45.0,
-                  //             margin: EdgeInsets.fromLTRB(0,0,0,0),
-                  //             decoration: BoxDecoration(
-                  //             shape: BoxShape.circle,
-                  //             image: DecorationImage(
-                  //             image: AssetImage("assests/girl.png"),
-                  //                   fit: BoxFit.fill,
-                  //               ),
-                  //             ),
-                  //           ),
-                  //           onTap: (){},
-                  //           title: Text('Ruchira kavinda',style: TextStyle(fontWeight: FontWeight.w500),),
-                  //           subtitle: Text('Just now'),
-                  //           trailing:Column(
-                  //           children: [
-                  //             IconButton(
-                  //               icon:Icon(Icons.more_horiz,size: 35.0,), onPressed: () {  } ,
-                  //               ),
-                  //             ],
-                  //           ),
-                  //     ),
+                  ),                  
                   ), 
                 ),
 
 
 
-
+              Container(
+                height: 10,
+                color: Colors.grey[300],
+              ),
 
 
 
@@ -252,7 +241,8 @@ var _connections;
                 children: [
                   Padding(
                     padding: const EdgeInsets.fromLTRB(20,0,0,0),
-                    child: Text('Requests', style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700) ,),
+                    child: Text(' All connections', 
+                    style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700) ,),
                   ),
 
                   Padding(
@@ -260,10 +250,9 @@ var _connections;
                     // ignore: deprecated_member_use
                     child: FlatButton(
                     onPressed: () {  },
-                    child: Text('Show all', 
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600) ,)),
+                    child: Text('${conn.length}', 
+                    style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700),),
+                    ),
                   ),
                 ],
               ),
@@ -278,7 +267,7 @@ var _connections;
                       color: Colors.grey[200],
                   ),
                     ),
-                  itemCount: 10,
+                  itemCount: conn.length,
                   scrollDirection:Axis.vertical,
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
@@ -310,7 +299,7 @@ var _connections;
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text('Ruchira kavinda',
+                                    Text(conn[index],
                                     style: TextStyle(fontWeight: FontWeight.w500,fontSize: 17),),
                                     Text('Just now',
                                     style:TextStyle(color: Colors.black54)),
@@ -387,6 +376,13 @@ var _connections;
           ],
         ) ,),
       ),
+
+      floatingActionButton: new FloatingActionButton(
+      elevation:5,
+      child: new Icon(Icons.person_add_alt),
+      backgroundColor: Colors.teal[800],
+      onPressed: (){}
+    )
      );
   }
 }
