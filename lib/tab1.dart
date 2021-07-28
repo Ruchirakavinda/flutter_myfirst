@@ -15,6 +15,10 @@ class _Tab1State extends State<Tab1> {
   List story = ["assests/girl.png","assests/girl.png","assests/my.jpg"];
   static const user = 'assests/my.jpg';
 
+  final GlobalKey<FormState>_form5 =  GlobalKey<FormState>();
+  var _accounts;
+
+
 
 
   @override
@@ -32,7 +36,7 @@ class _Tab1State extends State<Tab1> {
                               Column(
                                 children:<Widget> [
                                   Container(
-                                    margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                                    margin: EdgeInsets.fromLTRB(20, 20, 0, 0),
                                     child:Text(
                                       "News Feed",
                                       style: TextStyle(
@@ -43,24 +47,87 @@ class _Tab1State extends State<Tab1> {
                                         
                                 ],
                               ),
-                            Container(
-                                margin: EdgeInsets.all(10.0),
-                                child: Column(
-                                  children:<Widget> [
-                                    FloatingActionButton(
-                                      backgroundColor: Colors.grey.withOpacity(0.2),
-                                      mini: true,
-                                      elevation: 0.0,
-                                      child: Icon(Icons.search,size: 25,color: Colors.black,),
-                                      onPressed: (){},
-                                    ),
-                                  ],
-                                ),
-                              ),
+                            // Container(
+                            //     margin: EdgeInsets.all(10.0),
+                            //     child: Column(
+                            //       children:<Widget> [
+                            //         FloatingActionButton(
+                            //           backgroundColor: Colors.grey.withOpacity(0.2),
+                            //           mini: true,
+                            //           elevation: 0.0,
+                            //           child: Icon(Icons.search,size: 25,color: Colors.black,),
+                            //           onPressed: (){},
+                            //         ),
+                            //       ],
+                            //     ),
+                            //   ),
 
                             ],
                 ),
               ),
+              Container(
+              child: Form(
+                key:_form5 ,
+                child:Container(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(10,10,10,10),
+                  child: Card(
+                      shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50), // if you need this
+                      side: BorderSide(
+                        color: Colors.white.withOpacity(0.5),
+                        width: 1,
+                      ),
+                    ),
+                    color: Colors.white,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(10,0,20,0),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(0,0,0,0),
+                              child: TextFormField(
+                                cursorColor: Colors.white,
+                                style: TextStyle(color: Colors.black54),
+                                decoration: InputDecoration(
+                                  prefixIcon: Icon(
+                                    Icons.person_search,
+                                    color: Colors.black.withOpacity(0.2),),
+                                    suffixIcon: IconButton(
+                                    onPressed: (){
+                                       if(_form5.currentState!.validate()){
+                                      _form5.currentState!.save();
+                                      print(_accounts);
+                                    }
+                                    },
+                                  icon:Icon(Icons.search_outlined,
+                                  size: 25,
+                                  color: Colors.black.withOpacity(0.6),),),
+                                  border: InputBorder.none,
+                                  hintText: 'Search...',
+                                  hintStyle: TextStyle(
+                                    color: Colors.black.withOpacity(0.2), 
+                                    
+                                    fontSize: 18),
+                                  
+                                ),
+                                validator: (text){
+                                  return null;
+                                },
+
+                                onSaved: (text){
+                                  _accounts= text!;
+                                },
+                                ),
+                            )
+                          ],
+                        ),
+                    ), 
+                  ),
+                ), 
+               ), 
+               ),
+            ),
 
               Container(
                 height: 10,
@@ -80,7 +147,7 @@ class _Tab1State extends State<Tab1> {
                     // ignore: deprecated_member_use
                     child: FlatButton(
                     onPressed: () {  },
-                    child: Text('See All', 
+                    child: Text('Show all', 
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w600) ,)),
