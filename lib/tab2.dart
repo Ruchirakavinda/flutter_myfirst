@@ -17,6 +17,7 @@ var _connections;
       body: Container(
       child: SingleChildScrollView(
         child:Column(
+          mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             
@@ -124,35 +125,264 @@ var _connections;
 
 
               SizedBox(
-                height:300,
-                child: ListView.builder(
-                  itemCount: 5,
+                height:350,
+                child: ListView.separated(
+                    separatorBuilder: (context, index) => Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: Container(
+                      height: 2,
+                      color: Colors.grey[200],
+                  ),
+                  ),
+                  physics: NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: 10,
                   scrollDirection:Axis.vertical,
-                  itemBuilder:(context,index) => ListTile(
-                        leading:Container(
-                              width:45.0,
-                              height:45.0,
-                              margin: EdgeInsets.fromLTRB(0,0,0,0),
-                              decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              image: DecorationImage(
-                              image: AssetImage("assests/girl.png"),
-                                    fit: BoxFit.fill,
+                  itemBuilder:(context,index) => Padding(
+                    padding: const EdgeInsets.fromLTRB(0,10,5,10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        FlatButton(
+                        onPressed: () {  },
+                          child: 
+                            Row(
+                              children: [
+                                Container(
+                                          width:60.0,
+                                          height:60.0,
+                                          margin: EdgeInsets.fromLTRB(0,0,0,0),
+                                          decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          image: DecorationImage(
+                                          image: AssetImage("assests/girl.png"),
+                                                fit: BoxFit.fill,
+                                            ),
+                                      ),
+                                  ),
+
+                                Padding(
+                                padding: const EdgeInsets.fromLTRB(20,0,0,0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Ruchira kavinda',
+                                    style: TextStyle(fontWeight: FontWeight.w500,fontSize: 17),),
+                                    Text('Just now',
+                                    style:TextStyle(color: Colors.black54)),
+
+
+                                  ],
+                                ),
+                              )         
+                              ],
+                            ), 
+                        ),
+
+                        Container(
+                                margin: EdgeInsets.all(0.0),
+                                child: Row(
+                                  children:<Widget> [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: FloatingActionButton(
+                                        backgroundColor: Colors.teal[800],
+                                        mini: true,
+                                        elevation: 0.0,
+                                        child: Icon(Icons.done,size: 25,
+                                        color: Colors.white,),
+                                        onPressed: (){},
+                                      ),
+                                    ),
+
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: FloatingActionButton(
+                                        backgroundColor: Colors.black12,
+                                        mini: true,
+                                        elevation: 0.0,
+                                        child: Icon(Icons.close,size: 25,
+                                        color: Colors.teal[900],),
+                                        onPressed: (){},
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
-                            ),
-                            onTap: (){},
-                            title: Text('Ruchira kavinda',style: TextStyle(fontWeight: FontWeight.w500),),
-                            subtitle: Text('Just now'),
-                            trailing:Column(
-                            children: [
-                              IconButton(
-                                icon:Icon(Icons.more_horiz,size: 35.0,), onPressed: () {  } ,
+
+                      ],
+                    ),
+                  )
+                  
+                  //ListTile(
+                  //       leading:Container(
+                  //             width:45.0,
+                  //             height:45.0,
+                  //             margin: EdgeInsets.fromLTRB(0,0,0,0),
+                  //             decoration: BoxDecoration(
+                  //             shape: BoxShape.circle,
+                  //             image: DecorationImage(
+                  //             image: AssetImage("assests/girl.png"),
+                  //                   fit: BoxFit.fill,
+                  //               ),
+                  //             ),
+                  //           ),
+                  //           onTap: (){},
+                  //           title: Text('Ruchira kavinda',style: TextStyle(fontWeight: FontWeight.w500),),
+                  //           subtitle: Text('Just now'),
+                  //           trailing:Column(
+                  //           children: [
+                  //             IconButton(
+                  //               icon:Icon(Icons.more_horiz,size: 35.0,), onPressed: () {  } ,
+                  //               ),
+                  //             ],
+                  //           ),
+                  //     ),
+                  ), 
+                ),
+
+
+
+
+
+
+
+                Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20,0,0,0),
+                    child: Text('Requests', style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700) ,),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0,0,0,0),
+                    // ignore: deprecated_member_use
+                    child: FlatButton(
+                    onPressed: () {  },
+                    child: Text('Show all', 
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600) ,)),
+                  ),
+                ],
+              ),
+
+
+              Flexible(
+                child: ListView.separated(
+                    separatorBuilder: (context, index) => Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: Container(
+                      height: 2,
+                      color: Colors.grey[200],
+                  ),
+                    ),
+                  itemCount: 10,
+                  scrollDirection:Axis.vertical,
+                  physics: NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  itemBuilder:(context,index) => Padding(
+                    padding: const EdgeInsets.fromLTRB(0,10,5,10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        FlatButton(
+                        onPressed: () {  },
+                          child: 
+                            Row(
+                              children: [
+                                Container(
+                                          width:60.0,
+                                          height:60.0,
+                                          margin: EdgeInsets.fromLTRB(0,0,0,0),
+                                          decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          image: DecorationImage(
+                                          image: AssetImage("assests/girl.png"),
+                                                fit: BoxFit.fill,
+                                            ),
+                                      ),
+                                  ),
+
+                                Padding(
+                                padding: const EdgeInsets.fromLTRB(20,0,0,0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Ruchira kavinda',
+                                    style: TextStyle(fontWeight: FontWeight.w500,fontSize: 17),),
+                                    Text('Just now',
+                                    style:TextStyle(color: Colors.black54)),
+
+
+                                  ],
                                 ),
+                              )         
                               ],
-                            ),
-                      ),
-                  ) 
+                            ), 
+                        ),
+
+                        Container(
+                                margin: EdgeInsets.all(0.0),
+                                child: Row(
+                                  children:<Widget> [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: FloatingActionButton(
+                                        backgroundColor: Colors.teal[800],
+                                        mini: true,
+                                        elevation: 0.0,
+                                        child: Icon(Icons.done,size: 25,
+                                        color: Colors.white,),
+                                        onPressed: (){},
+                                      ),
+                                    ),
+
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: FloatingActionButton(
+                                        backgroundColor: Colors.black12,
+                                        mini: true,
+                                        elevation: 0.0,
+                                        child: Icon(Icons.close,size: 25,
+                                        color: Colors.teal[900],),
+                                        onPressed: (){},
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+
+                      ],
+                    ),
+                  )
+                  
+                  //ListTile(
+                  //       leading:Container(
+                  //             width:45.0,
+                  //             height:45.0,
+                  //             margin: EdgeInsets.fromLTRB(0,0,0,0),
+                  //             decoration: BoxDecoration(
+                  //             shape: BoxShape.circle,
+                  //             image: DecorationImage(
+                  //             image: AssetImage("assests/girl.png"),
+                  //                   fit: BoxFit.fill,
+                  //               ),
+                  //             ),
+                  //           ),
+                  //           onTap: (){},
+                  //           title: Text('Ruchira kavinda',style: TextStyle(fontWeight: FontWeight.w500),),
+                  //           subtitle: Text('Just now'),
+                  //           trailing:Column(
+                  //           children: [
+                  //             IconButton(
+                  //               icon:Icon(Icons.more_horiz,size: 35.0,), onPressed: () {  } ,
+                  //               ),
+                  //             ],
+                  //           ),
+                  //     ),
+                  ), 
                 ),
           ],
         ) ,),
