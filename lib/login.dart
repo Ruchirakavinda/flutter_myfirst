@@ -39,7 +39,8 @@ Widget _username() {
                               cursorColor: Colors.white,
                               style: TextStyle(color: Colors.white),
                               decoration: InputDecoration(
-                                prefixIcon: Icon(Icons.person_rounded,color: Colors.white.withOpacity(0.5),),
+                                prefixIcon: Icon(
+                                  Icons.person_rounded,color: Colors.white.withOpacity(0.5),),
                                 border: InputBorder.none,
                                 hintText: 'Username',
                                 hintStyle: TextStyle(
