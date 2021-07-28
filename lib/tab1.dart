@@ -10,7 +10,7 @@ class Tab1 extends StatefulWidget {
 class _Tab1State extends State<Tab1> {
 
   List name=["Ruchira Kavinda","Mia Andrus","Sunny Lisa"];
-  List time = ["Just Now","36 m","12 h"];
+  List time = ["Just Now","36 m","57 m","12 h","1 d","2 d"];
   List img= ["assests/my.jpg","assests/girl.png","assests/girl.png"];
   List story = ["assests/girl.png","assests/girl.png","assests/my.jpg"];
   static const user = 'assests/my.jpg';
@@ -73,7 +73,7 @@ class _Tab1State extends State<Tab1> {
                   padding: const EdgeInsets.fromLTRB(10,5,10,10),
                   child: Card(
                       shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50), // if you need this
+                      borderRadius: BorderRadius.circular(50), 
                       side: BorderSide(
                         color: Colors.white.withOpacity(0.5),
                         width: 1,
@@ -91,7 +91,7 @@ class _Tab1State extends State<Tab1> {
                                 style: TextStyle(color: Colors.black54),
                                 decoration: InputDecoration(
                                   prefixIcon: Icon(
-                                    Icons.person_search,
+                                    Icons.image_search_outlined,
                                     color: Colors.black.withOpacity(0.2),),
                                     suffixIcon: IconButton(
                                     onPressed: (){
