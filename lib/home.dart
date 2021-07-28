@@ -17,7 +17,7 @@ class _MyHomeState extends State<MyHome> {
   @override
   Widget build(BuildContext context) {
      return DefaultTabController(
-      length: 4,
+      length: 3,
       child: Scaffold(
           appBar: AppBar(
             toolbarHeight: 130,
@@ -60,9 +60,9 @@ class _MyHomeState extends State<MyHome> {
                    
                     tabs: [
                       Tab(text: 'Home',icon: Icon(Icons.home,size: 22.0,),),
-                      Tab(text: 'Profile',icon: Icon(Icons.person_rounded,size: 22.0,),),
+                      Tab(text: 'Community',icon: Icon(Icons.people,size: 22.0,),),
                       Tab(text: 'Notifications',icon: Icon(Icons.notifications,size: 22.0,),),
-                      Tab(text: 'Library',icon: Icon(Icons.library_books,size: 22.0,),),
+                      // Tab(text: 'Library',icon: Icon(Icons.library_books,size: 22.0,),),
                       
                     ],
                   ),
@@ -76,7 +76,7 @@ class _MyHomeState extends State<MyHome> {
               Tab1(),
               Tab2(),
               Tab3(),
-              Tab4(),
+              // Tab4(),
              
             ],
          ),

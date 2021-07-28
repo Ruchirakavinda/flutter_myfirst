@@ -17,8 +17,7 @@ class _tab2State extends State<Tab2> {
       child: Center(
       child: Text("Profile Page"),
       ),
-      
-  ),
+     ),
     );
   }
 }
