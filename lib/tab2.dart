@@ -115,7 +115,7 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d"];
                 children: [
                   Padding(
                     padding: const EdgeInsets.fromLTRB(20,0,0,0),
-                    child:Text('${req.length} Requests', style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700) ,),
+                    child:Text('Requests  ${req.length}', style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700) ,),
                   ),
 
                   Padding(
