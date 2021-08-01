@@ -194,16 +194,26 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
                                 margin: EdgeInsets.all(0.0),
                                 child: Row(
                                   children:<Widget> [
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: FloatingActionButton(
-                                        backgroundColor: Colors.teal[800],
-                                        mini: true,
-                                        elevation: 0.0,
-                                        child: Icon(Icons.done,size: 20,
-                                        color: Colors.white,),
-                                        onPressed: (){},
-                                      ),
+                                   Material(
+                                      type: MaterialType.transparency, //Makes it usable on any background color, thanks @IanSmith
+                                      child: Ink(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(color: Colors.white, width: 0.0),
+                                          color: Colors.teal[900],
+                                          borderRadius: BorderRadius.circular(10),
+                                         
+                                        ),
+                                        child: InkWell(
+                                          //This keeps the splash effect within the circle
+                                          borderRadius: BorderRadius.circular(0.0), //Something large to ensure a circle
+                                          onTap: (){},
+                                          child: Padding(
+                                            padding:EdgeInsets.fromLTRB(20,10,20,10),
+                                            child: Text("Accept", 
+                                            style:TextStyle(color: Colors.white) ,),
+                                          ),
+                                        ),
+                                      )
                                     ),
 
                                     Padding(
@@ -318,27 +328,30 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
                                   children:<Widget> [
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
-                                      child: FloatingActionButton(
-                                        backgroundColor: Colors.teal[800],
-                                        mini: true,
-                                        elevation: 0.0,
-                                        child: Icon(Icons.done,size: 25,
-                                        color: Colors.white,),
-                                        onPressed: (){},
-                                      ),
+                                      child:  Material(
+                                      type: MaterialType.transparency, //Makes it usable on any background color, thanks @IanSmith
+                                      child: Ink(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(color: Colors.white, width: 0.0),
+                                          color: Colors.grey.shade300,
+                                          borderRadius: BorderRadius.circular(10),
+                                         
+                                        ),
+                                        child: InkWell(
+                                          //This keeps the splash effect within the circle
+                                          borderRadius: BorderRadius.circular(0.0), //Something large to ensure a circle
+                                          onTap: (){},
+                                          child: Padding(
+                                            padding:EdgeInsets.fromLTRB(20,10,20,10),
+                                            child: Text("Remove", 
+                                            style:TextStyle(color: Colors.teal.shade900) ,),
+                                          ),
+                                        ),
+                                      )
+                                    ),
                                     ),
 
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: FloatingActionButton(
-                                        backgroundColor: Colors.black12,
-                                        mini: true,
-                                        elevation: 0.0,
-                                        child: Icon(Icons.close,size: 25,
-                                        color: Colors.teal[900],),
-                                        onPressed: (){},
-                                      ),
-                                    ),
+                                    
                                   ],
                                 ),
                               ),
