@@ -14,7 +14,7 @@ var _connections;
 
 List req=["Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay","Kevin Gande"];
 List conn=["Mia Andrus","Sunny Lisa","Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay","Kevin Gande","Alon ferdus"];
-List time = ["Just Now","36 m","57 m","12 h","1 d","2 d"];
+List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d"];
 
             Container(
               child: Form(
-                key:_form4 ,
+                key:_form4,
                 child:Container(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(10,10,10,10),
@@ -144,7 +144,7 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d"];
                   ),
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: 10,
+                  itemCount: req.length,
                   scrollDirection:Axis.vertical,
                   itemBuilder:(context,index) => Padding(
                     padding: const EdgeInsets.fromLTRB(0,10,5,10),
