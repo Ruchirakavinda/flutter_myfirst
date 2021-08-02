@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class Find extends StatefulWidget {
   const Find({ Key? key }) : super(key: key);
@@ -33,7 +34,24 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
               ),
             ),
             backgroundColor: Colors.teal[700],
-            title:Text("My First",style: TextStyle(fontSize: 25.0,),),       
+
+            leading: Padding(
+                  padding: const EdgeInsets.only(left: 0.0),
+                  child: IconButton(
+                  icon:Icon(MdiIcons.arrowLeftThick,size: 30.0,), onPressed: () {  
+                     Navigator.pop(context); 
+                  } ,),
+                ),
+          title:Center(child: Text("Test Social",style: TextStyle(fontSize: 25.0,),)),
+
+          actions: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: IconButton(
+                  icon:Icon(MdiIcons.send,size: 25.0,color: Colors.white.withOpacity(0.9),), onPressed: () {  } ,),
+                ),
+                ],
+ 
                 
           ),
           body: Container(
@@ -195,10 +213,10 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
                                     style: TextStyle(fontWeight: FontWeight.w500,fontSize: 17),),
                                    
                                     Text('United States',
-                                    style:TextStyle(color: Colors.black87)),
-
-                                    Text(time[index],
                                     style:TextStyle(color: Colors.black54)),
+
+                                    // Text(time[index],
+                                    // style:TextStyle(color: Colors.black54)),
 
                                   ],
                                 ),
@@ -208,7 +226,7 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
                         ),
 
                         Container(
-                                margin: EdgeInsets.fromLTRB(0,0,10,0),
+                                margin: EdgeInsets.fromLTRB(0,0,0,0),
                                 child: Row(
                                   children:<Widget> [
                                    Material(
@@ -231,6 +249,20 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
                                           ),
                                         ),
                                       )
+                                    ),
+
+
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: FloatingActionButton(
+                                        heroTag: index,
+                                        backgroundColor: Colors.black12,
+                                        mini: true,
+                                        elevation: 0.0,
+                                        child: Icon(MdiIcons.accountMinus,size: 20,
+                                        color: Colors.teal[900],),
+                                        onPressed: (){},
+                                      ),
                                     ),
 
                                     

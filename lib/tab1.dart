@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class Tab1 extends StatefulWidget {
   const Tab1({ Key? key }) : super(key: key);
@@ -352,15 +353,15 @@ class _Tab1State extends State<Tab1> {
                           children: [
                             IconButton(
                               onPressed: (){}, 
-                              icon: Icon(Icons.star,size: 30,color: Colors.black54,)),
+                              icon: Icon(MdiIcons.heartMultiple,size: 25,color: Colors.black54,)),
 
                             IconButton(
                               onPressed: (){}, 
-                              icon: Icon(Icons.comment,size: 30,color: Colors.black54,)),
+                              icon: Icon(MdiIcons.tooltipText,size: 25,color: Colors.black54,)),
 
                             IconButton(
                             onPressed: (){}, 
-                            icon: Icon(Icons.share,size: 30,color: Colors.black54,))
+                            icon: Icon(MdiIcons.shareAll,size: 30,color: Colors.black54,))
                           ],
 
                           

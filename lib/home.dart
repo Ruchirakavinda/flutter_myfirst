@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myfirst/tab1.dart';
 import 'package:myfirst/tab2.dart';
 import 'package:myfirst/tab3.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 // import 'package:myfirst/tab4.dart';
 
 // import 'package:flutter/rendering.dart';
@@ -20,7 +21,6 @@ class _MyHomeState extends State<MyHome> {
       length: 3,
       child: Scaffold(
           appBar: AppBar(
-            toolbarHeight: 130,
             flexibleSpace: Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -37,16 +37,16 @@ class _MyHomeState extends State<MyHome> {
             leading: Padding(
                   padding: const EdgeInsets.only(left: 10.0),
                   child: IconButton(
-                  icon:Icon(Icons.menu,size: 30.0,), onPressed: () {  } ,),
+                  icon:Icon(MdiIcons.sortVariant,size: 35.0,), onPressed: () {  } ,),
                 ),
-            title:Text("My First",style: TextStyle(fontSize: 25.0,),),
+            title:Center(child: Text("Test Social",style: TextStyle(fontSize: 25.0,),)),
             
           
               actions: [
                 Padding(
                   padding: const EdgeInsets.only(right: 8.0),
                   child: IconButton(
-                  icon:Icon(Icons.message_sharp,size: 25.0,color: Colors.white.withOpacity(0.9),), onPressed: () {  } ,),
+                  icon:Icon(MdiIcons.send,size: 25.0,color: Colors.white.withOpacity(0.9),), onPressed: () {  } ,),
                 ),
                 ],
 
