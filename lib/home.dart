@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myfirst/tab1.dart';
 import 'package:myfirst/tab2.dart';
 import 'package:myfirst/tab3.dart';
-import 'package:myfirst/tab4.dart';
+// import 'package:myfirst/tab4.dart';
 
 // import 'package:flutter/rendering.dart';
 
@@ -130,7 +130,7 @@ class _MyHomeState extends State<MyHome> {
 //                 margin: EdgeInsets.all(10.0),
 //                 child: Column(
 //                   children:<Widget> [
-//                     FloatingActionButton(
+//                     ngActionButton(
 //                       backgroundColor: Colors.grey.withOpacity(0.2),
 //                       mini: true,
 //                       elevation: 0.0,

@@ -412,6 +412,7 @@ class _Tab1State extends State<Tab1> {
           ),),
       ),
       floatingActionButton: new FloatingActionButton(
+      heroTag: "add",
       elevation:5,
       child: new Icon(Icons.add_photo_alternate_outlined),
       backgroundColor: Colors.teal[800],
