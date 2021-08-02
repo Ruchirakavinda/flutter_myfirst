@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myfirst/find.dart';
 
 class Tab2 extends StatefulWidget {
   const Tab2({ Key? key }) : super(key: key);
@@ -133,7 +134,7 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
 
 
               SizedBox(
-                height:350,
+                height:260,
                 child: ListView.separated(
                     separatorBuilder: (context, index) => Padding(
                       padding: const EdgeInsets.all(2.0),
@@ -219,6 +220,7 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: FloatingActionButton(
+                                        heroTag: index,
                                         backgroundColor: Colors.black12,
                                         mini: true,
                                         elevation: 0.0,
@@ -334,8 +336,7 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
                                         decoration: BoxDecoration(
                                           border: Border.all(color: Colors.white, width: 0.0),
                                           color: Colors.grey.shade300,
-                                          borderRadius: BorderRadius.circular(10),
-                                         
+                                          borderRadius: BorderRadius.circular(10),                                                                               
                                         ),
                                         child: InkWell(
                                           //This keeps the splash effect within the circle
@@ -391,10 +392,14 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
       ),
 
       floatingActionButton: new FloatingActionButton(
+      heroTag: "find",
       elevation:5,
       child: new Icon(Icons.person_add_alt),
       backgroundColor: Colors.teal[800],
-      onPressed: (){}
+      onPressed: (){
+        Navigator.push(context, 
+        MaterialPageRoute(builder: (context)=> Find()));
+      }
     )
      );
   }
