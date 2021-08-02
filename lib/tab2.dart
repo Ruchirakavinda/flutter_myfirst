@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:myfirst/find.dart';
 
 class Tab2 extends StatefulWidget {
@@ -224,7 +225,7 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
                                         backgroundColor: Colors.black12,
                                         mini: true,
                                         elevation: 0.0,
-                                        child: Icon(Icons.close,size: 20,
+                                        child: Icon(MdiIcons.accountRemove,size: 20,
                                         color: Colors.teal[900],),
                                         onPressed: (){},
                                       ),
