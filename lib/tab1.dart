@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:myfirst/stories.dart';
 
 class Tab1 extends StatefulWidget {
   const Tab1({ Key? key }) : super(key: key);
@@ -147,7 +148,10 @@ class _Tab1State extends State<Tab1> {
                     padding: const EdgeInsets.fromLTRB(0,0,0,0),
                     // ignore: deprecated_member_use
                     child: FlatButton(
-                    onPressed: () {  },
+                    onPressed: () {
+                      Navigator.push(context, 
+                      MaterialPageRoute(builder: (context)=> Stories()));
+                      },
                     child: Text('Show all', 
                     style: TextStyle(
                       fontSize: 15,
@@ -206,22 +210,41 @@ class _Tab1State extends State<Tab1> {
                           borderRadius: BorderRadius.circular(10),
                           color: Colors.teal[800],
                           image: DecorationImage(
-                            image: AssetImage(story[index]),
-                            fit: BoxFit.cover
+                             fit: BoxFit.cover,
+                             colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.3), BlendMode.darken),
+                             image: AssetImage(story[index]),
+                           
                             ),
                             
                         ),
+                        
                         width: 110,
                         margin: EdgeInsets.fromLTRB(0,10,0,10),
                         child: Center(
                           child:Column(
-                            mainAxisAlignment: MainAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                   Flexible(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(name[index],
+                                      style: TextStyle(color: Colors.white,fontWeight: FontWeight.w900),
+                                      maxLines: 5,
+                                      softWrap: false,
+                                      overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                               Container(
                               width:45.0,
                               height:45.0,
-                              margin: EdgeInsets.fromLTRB(0,0,0,0),
+                              margin: EdgeInsets.fromLTRB(0,0,10,10),
                               decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               image: DecorationImage(
@@ -392,7 +415,11 @@ class _Tab1State extends State<Tab1> {
                             Text(time[index]),
                             Padding(
                               padding: const EdgeInsets.fromLTRB(0,10,0,10),
-                              child: Text('I need to make body part scrollable.\nHow can i implement that scroll.',style: TextStyle(fontSize: 16,color: Colors.black),),
+                              child: Text('I need to make body part scrollable.How can i implement that scroll.',style: TextStyle(fontSize: 16,color: Colors.black),
+                               maxLines: 15,
+                               softWrap: false,
+                               overflow: TextOverflow.ellipsis,
+                              ),
                             )
                           ],
                         ),

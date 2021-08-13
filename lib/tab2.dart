@@ -18,6 +18,29 @@ List req=["Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson",
 List conn=["Mia Andrus","Sunny Lisa","Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay","Kevin Gande","Alon ferdus"];
 List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
 
+
+var heightbox = ["260","null"];
+var heights=2;
+var text2 = "Show all";
+
+    setHeight(){
+      if( heights == 2){
+        setState(() {
+
+          heights=req.length;
+          text2="Show less";
+       
+      });
+      }
+      else{
+        setState(() {
+          heights=2;
+          text2="Show all";
+
+      });
+      }
+    }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -124,8 +147,8 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
                     padding: const EdgeInsets.fromLTRB(0,0,0,0),
                     // ignore: deprecated_member_use
                     child: FlatButton(
-                    onPressed: () {  },
-                    child: Text('Show all', 
+                    onPressed: () { setHeight(); },
+                    child: Text(text2, 
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w600) ,)),
@@ -135,7 +158,6 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
 
 
               SizedBox(
-                height:260,
                 child: ListView.separated(
                     separatorBuilder: (context, index) => Padding(
                       padding: const EdgeInsets.all(2.0),
@@ -146,7 +168,7 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
                   ),
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: req.length,
+                  itemCount: heights,
                   scrollDirection:Axis.vertical,
                   itemBuilder:(context,index) => Padding(
                     padding: const EdgeInsets.fromLTRB(0,10,5,10),
