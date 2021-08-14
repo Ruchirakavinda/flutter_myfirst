@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myfirst/messages.dart';
 import 'package:myfirst/tab1.dart';
 import 'package:myfirst/tab2.dart';
 import 'package:myfirst/tab3.dart';
@@ -46,7 +47,11 @@ class _MyHomeState extends State<MyHome> {
                 Padding(
                   padding: const EdgeInsets.only(right: 8.0),
                   child: IconButton(
-                  icon:Icon(MdiIcons.send,size: 25.0,color: Colors.white.withOpacity(0.9),), onPressed: () {  } ,),
+                  icon:Icon(MdiIcons.send,size: 25.0,color: Colors.white.withOpacity(0.9),), 
+                  onPressed: () { 
+                    Navigator.push(context, 
+                      MaterialPageRoute(builder: (context)=> Msg()));
+                    } ,),
                 ),
                 ],
 

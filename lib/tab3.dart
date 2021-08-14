@@ -53,7 +53,7 @@ var text2 = "Show all";
             Container(
               margin: EdgeInsets.fromLTRB(20, 20, 0, 0),
               child:Text(
-              "Community",
+              "Notifications",
               style: TextStyle(
               fontSize:25.0 ,fontWeight: FontWeight.w700,
               ),
@@ -156,97 +156,79 @@ var text2 = "Show all";
               ),
 
 
-              SizedBox(
-                child: ListView.separated(
-                    separatorBuilder: (context, index) => Padding(
-                      padding: const EdgeInsets.all(2.0),
-                      child: Container(
-                      height: 2,
-                      color: Colors.grey[200],
+              Flexible(
+                
+                child:ListView.separated(
+                    separatorBuilder: (context, index) => Container(
+                    height: 1,
+                    color: Colors.grey[300],
                   ),
-                  ),
+                  itemCount: heights,
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: heights,
-                  scrollDirection:Axis.vertical,
-                  itemBuilder:(context,index) => Padding(
-                    padding: const EdgeInsets.fromLTRB(0,10,5,10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        FlatButton(
-                        onPressed: () {  },
-                          child: 
-                            Row(
-                              children: [
-                                Container(
-                                          width:60.0,
-                                          height:60.0,
-                                          margin: EdgeInsets.fromLTRB(0,0,0,0),
-                                          decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          image: DecorationImage(
-                                          image: AssetImage("assests/girl.png"),
-                                                fit: BoxFit.fill,
-                                            ),
-                                      ),
-                                  ),
+                  itemBuilder:(context,index)=>Column(
+                    children: [
+                      
 
-                                Padding(
-                                padding: const EdgeInsets.fromLTRB(20,0,0,0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(req[index],
-                                    style: TextStyle(fontWeight: FontWeight.w500,fontSize: 17),),
-                                   
-                                    Text('United States',
-                                    style:TextStyle(color: Colors.black87)),
 
-                                    Text(time[index],
-                                    style:TextStyle(color: Colors.black54)),
 
-                                  ],
-                                ),
-                              )         
-                              ],
-                            ), 
+                      ListTile(
+                        leading:Container(
+                          width:60.0,
+                          height:60.0,
+                          margin: EdgeInsets.fromLTRB(0,0,0,0),
+                          decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                          image: AssetImage("assests/girl.png"),
+                                fit: BoxFit.fill,
+                            ),
+                          ),
                         ),
-
-                        Container(
-                                margin: EdgeInsets.all(0.0),
-                                child: Row(
-                                  children:<Widget> [
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: FloatingActionButton(
-                                        heroTag: index,
-                                        backgroundColor: Colors.black12,
-                                        mini: true,
-                                        elevation: 0.0,
-                                        child: Icon(Icons.more_horiz,size: 20,
-                                        color: Colors.teal[900],),
-                                        onPressed: (){},
-                                      ),
-                                    ),
-                                  ],
+                        onTap: (){},
+              
+                        subtitle: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(0,10,0,5),
+                              child: RichText(
+                                  text: TextSpan(
+                                    children: <TextSpan>[
+                                      TextSpan(text:req[index], style: TextStyle( color: Colors.black,fontSize: 16,fontWeight: FontWeight.w700)),
+                                      TextSpan(text: ' Reprehenderit ut est id ex commodo.', style: TextStyle( color: Colors.black, fontSize: 16)),
+                                    
+                                    ],
+                                  ),
+                                )
+                            ),
+                            Text(time[index]),
+                          ],
+                        ),
+                         trailing:Column(
+                            children: [
+                              IconButton(
+                                icon:Icon(Icons.more_horiz,size: 35.0,), onPressed: () {  } ,
                                 ),
-                              ),
-
-                      ],
-                    ),
-                  ),                  
-                  ), 
-                ),
+                              ],
+                            ),
+                        
+                      ),
 
 
 
-              Container(
-                height: 10,
-                color: Colors.grey[300],
+                    ],
+                  )
+                  ) 
               ),
 
 
+
+                  Container(
+                    height: 10,
+                    color: Colors.grey[300],
+                  ),
 
                 Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -261,84 +243,71 @@ var text2 = "Show all";
 
 
               Flexible(
-                child: ListView.separated(
-                    separatorBuilder: (context, index) => Padding(
-                      padding: const EdgeInsets.all(2.0),
-                      child: Container(
-                      height: 2,
-                      color: Colors.grey[200],
+                
+                child:ListView.separated(
+                    separatorBuilder: (context, index) => Container(
+                    height: 1,
+                    color: Colors.grey[300],
                   ),
-                    ),
-                  itemCount: conn.length,
-                  scrollDirection:Axis.vertical,
+                  itemCount: req.length,
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
-                  itemBuilder:(context,index) => Padding(
-                    padding: const EdgeInsets.fromLTRB(0,10,5,10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        FlatButton(
-                        onPressed: () {  },
-                          child: 
-                            Row(
-                              children: [
-                                Container(
-                                          width:60.0,
-                                          height:60.0,
-                                          margin: EdgeInsets.fromLTRB(0,0,0,0),
-                                          decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          image: DecorationImage(
-                                          image: AssetImage("assests/girl.png"),
-                                                fit: BoxFit.fill,
-                                            ),
-                                      ),
-                                  ),
-
-                                Padding(
-                                padding: const EdgeInsets.fromLTRB(20,0,0,0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(conn[index],
-                                    style: TextStyle(fontWeight: FontWeight.w500,fontSize: 17),),
-                                    Text('Just now',
-                                    style:TextStyle(color: Colors.black54)),
+                  itemBuilder:(context,index)=>Column(
+                    children: [
+                      
 
 
-                                  ],
-                                ),
-                              )         
-                              ],
-                            ), 
+
+                      ListTile(
+                        leading:Container(
+                          width:60.0,
+                          height:60.0,
+                          margin: EdgeInsets.fromLTRB(0,0,0,0),
+                          decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                          image: AssetImage("assests/girl.png"),
+                                fit: BoxFit.fill,
+                            ),
+                          ),
                         ),
-
-                         Container(
-                                margin: EdgeInsets.all(0.0),
-                                child: Row(
-                                  children:<Widget> [
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: FloatingActionButton(
-                                        heroTag: index,
-                                        backgroundColor: Colors.black12.withOpacity(0),
-                                        mini: true,
-                                        elevation: 0.0,
-                                        child: Icon(Icons.more_horiz,size: 30,
-                                        color: Colors.teal[900],),
-                                        onPressed: (){},
-                                      ),
-                                    ),
-                                  ],
+                        onTap: (){},
+              
+                        subtitle: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(0,10,0,5),
+                              child: RichText(
+                                  text: TextSpan(
+                                    children: <TextSpan>[
+                                      TextSpan(text:req[index], style: TextStyle( color: Colors.black,fontSize: 16,fontWeight: FontWeight.w700)),
+                                      TextSpan(text: ' Reprehenderit ut est id ex commodo.', style: TextStyle( color: Colors.black, fontSize: 16)),
+                                    
+                                    ],
+                                  ),
+                                )
+                            ),
+                            Text(time[index]),
+                          ],
+                        ),
+                         trailing:Column(
+                            children: [
+                              IconButton(
+                                icon:Icon(Icons.more_horiz,size: 35.0,), onPressed: () {  } ,
                                 ),
-                              ),
+                              ],
+                            ),
+                        
+                      ),
 
-                      ],
-                    ),
+
+
+                    ],
                   )
-                  ), 
-                ),
+                  ) 
+              ),
           ],
         ) ,),
       ),

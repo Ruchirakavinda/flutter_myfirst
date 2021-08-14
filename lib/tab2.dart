@@ -20,11 +20,11 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
 
 
 var heightbox = ["260","null"];
-var heights=2;
+var heights=3;
 var text2 = "Show all";
 
     setHeight(){
-      if( heights == 2){
+      if( heights == 3){
         setState(() {
 
           heights=req.length;
@@ -34,7 +34,7 @@ var text2 = "Show all";
       }
       else{
         setState(() {
-          heights=2;
+          heights=3;
           text2="Show all";
 
       });
