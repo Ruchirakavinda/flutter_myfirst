@@ -97,7 +97,7 @@ List country=["United States","Sri lanka","Australia","Dubai","Japan","China","U
                                 decoration: InputDecoration(
                                   prefixIcon: Icon(
                                     Icons.person_search,
-                                    color: Colors.black.withOpacity(0.2),),
+                                    color: Colors.black.withOpacity(0.3),),
                                     suffixIcon: IconButton(
                                     onPressed: (){
                                        if(_form5.currentState!.validate()){
@@ -111,7 +111,7 @@ List country=["United States","Sri lanka","Australia","Dubai","Japan","China","U
                                   border: InputBorder.none,
                                   hintText: 'Search for connect...',
                                   hintStyle: TextStyle(
-                                    color: Colors.black.withOpacity(0.2), 
+                                    color: Colors.black.withOpacity(0.3), 
                                     
                                     fontSize: 18),
                                   

@@ -57,7 +57,7 @@ class _MyHomeState extends State<MyHome> {
                 Padding(
                   padding: const EdgeInsets.only(right: 8.0),
                   child: IconButton(
-                  icon:Icon(MdiIcons.send,size: 25.0,color: Colors.white.withOpacity(0.9),), 
+                  icon:Icon(MdiIcons.messageText,size: 28.0,color: Colors.white.withOpacity(0.9),), 
                   onPressed: () { 
                     Navigator.push(context, 
                       MaterialPageRoute(builder: (context)=> Msg()));

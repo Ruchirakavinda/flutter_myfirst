@@ -95,7 +95,7 @@ class _Tab1State extends State<Tab1> {
                                 decoration: InputDecoration(
                                   prefixIcon: Icon(
                                     Icons.image_search_outlined,
-                                    color: Colors.black.withOpacity(0.2),),
+                                    color: Colors.black.withOpacity(0.3),),
                                     suffixIcon: IconButton(
                                     onPressed: (){
                                        if(_form10.currentState!.validate()){
@@ -109,7 +109,7 @@ class _Tab1State extends State<Tab1> {
                                   border: InputBorder.none,
                                   hintText: 'Search...',
                                   hintStyle: TextStyle(
-                                    color: Colors.black.withOpacity(0.2), 
+                                    color: Colors.black.withOpacity(0.3), 
                                     
                                     fontSize: 18),
                                   
@@ -276,7 +276,39 @@ class _Tab1State extends State<Tab1> {
                 height: 10,
                 color: Colors.grey[300],
               ),
+            Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20,0,0,0),
+                    child: Text('Activities', style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700) ,),
+                  ),
 
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0,0,10,0),
+                    // ignore: deprecated_member_use
+                    child: Container(
+                               child: DropdownButton<String>(
+                                items: <String>['Friends', 'Friends of Friends','Only me'].map((String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Container(
+                                      child: new Text(value)),
+                                  );
+                                }).toList(),
+                                onChanged: (value) {
+                                
+                                },
+                                icon:Icon(Icons.filter_list,size: 30,),
+                            ),
+                             ),
+                  ),
+                ],
+              ),
+               Container(
+                height: 10,
+                color: Colors.grey[300],
+              ),
 
               Flexible(
                 child:ListView.separated(
@@ -307,9 +339,24 @@ class _Tab1State extends State<Tab1> {
                             subtitle: Text(time[index]),
                             trailing:Column(
                             children: [
-                              IconButton(
-                                icon:Icon(Icons.more_horiz,size: 35.0,), onPressed: () {  } ,
-                                ),
+                             Container(
+                               child: DropdownButton<String>(
+                                items: <String>['Save post', 'Hide post','Report a problem'].map((String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Container(
+                                      child: new Text(value)),
+                                  );
+                                }).toList(),
+                                onChanged: (value) {
+                                 if(value=="Hide post"){
+                                   Navigator.push(context, 
+                                   MaterialPageRoute(builder: (context)=> Stories()));
+                                 }
+                                },
+                                icon:Icon(Icons.more_horiz,size: 30,),
+                            ),
+                             )
                               ],
                             ),
                       ),
