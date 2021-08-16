@@ -266,7 +266,7 @@ Widget _compassword() {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("My First",style: 
+              Text("SampleApp",style: 
               TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 30.0,),),
               SizedBox(height: 10.0,),
               Text("Flutter Application",style: 
@@ -339,6 +339,7 @@ Widget _compassword() {
                     fontSize: 18,
                     color: Colors.white),
                     ),
+                    // ignore: deprecated_member_use
                     FlatButton(
                       onPressed: (){
                         Navigator.pop(context);                   

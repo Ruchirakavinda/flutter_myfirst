@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
+import 'package:myfirst/main.dart';
 import 'package:myfirst/messages.dart';
+import 'package:myfirst/profile.dart';
 import 'package:myfirst/tab1.dart';
 import 'package:myfirst/tab2.dart';
 import 'package:myfirst/tab3.dart';
@@ -16,8 +20,10 @@ class MyHome extends StatefulWidget {
 }
 
 class _MyHomeState extends State<MyHome> {
+  
   @override
   Widget build(BuildContext context) {
+     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
      return DefaultTabController(
       length: 3,
       child: Scaffold(
@@ -37,10 +43,14 @@ class _MyHomeState extends State<MyHome> {
             backgroundColor: Colors.teal[700],
             leading: Padding(
                   padding: const EdgeInsets.only(left: 10.0),
-                  child: IconButton(
-                  icon:Icon(MdiIcons.sortVariant,size: 35.0,), onPressed: () {  } ,),
+                  child: Builder(builder: (context)=>(IconButton(
+                    icon:Icon(MdiIcons.sortVariant,size: 35.0,), onPressed: () { 
+                      Scaffold.of(context).openDrawer();
+                     } ,)
+                     ),
+                  ),
                 ),
-            title:Center(child: Text("Test Social",style: TextStyle(fontSize: 25.0,),)),
+            title:Center(child: Text("SampleApp",style: TextStyle(fontSize: 25.0,),)),
             
           
               actions: [
@@ -75,6 +85,183 @@ class _MyHomeState extends State<MyHome> {
                 shadowColor: Colors.black,
                 
                 
+          ),
+
+          drawer: Drawer(
+            child: ListView(
+              children: [
+                Container(
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    colors: [
+                    Colors.teal.shade700,
+                    Colors.black,
+                  ],
+                )
+              ),
+                  child:Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0,10,10,10),
+                        child: Row(
+                          mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                            width: 50,
+                            height: 50,
+                            margin: EdgeInsets.fromLTRB(20,15,0,0),
+                            decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              image: AssetImage(
+                                  "assests/my.jpg"),
+                              fit: BoxFit.fill,
+                            ),
+                            ),
+                           ),
+
+                           Container(
+                             child:IconButton(
+                              onPressed: (){
+                                Navigator.pop(context);
+                              }, 
+                              icon: Icon(MdiIcons.arrowLeftCircle,size: 35,color: Colors.white70,)),
+                           )
+                           
+                          ],
+                        ),
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0,0,0,10),
+                        child: ListTile(
+                          title: Text('Ruchira Kavinda', style: TextStyle(color: Colors.white,fontSize:18,),),
+                          subtitle: Text("ruchirakvnd@gmail.com",style: TextStyle(color: Colors.white,fontSize:16,),),
+                        ),
+                      ),
+                    ],
+                  ) ,
+            ),
+           
+          ListTile(
+            leading: Icon(Icons.person,size: 30,color: Colors.teal[800],),
+            title: Text('Profile',style: TextStyle(color: Colors.black,fontSize:16,),),
+            subtitle: Text("See your profile"),
+            trailing: Icon(Icons.menu),
+            onTap:(){ 
+              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (_) => Profile()));
+            },
+          ),
+          Container(
+                    height: 0.5,
+                    color: Colors.grey[300],
+          ),
+          ListTile(
+            leading: Icon(Icons.photo,size: 30,color: Colors.teal[800],),
+            title: Text('Photos',style: TextStyle(color: Colors.black,fontSize:16,),),
+            subtitle: Text("See your photos"),
+            trailing: Icon(Icons.menu),
+            onTap:(){ Navigator.pop(context);},
+          ),
+           Container(
+                    height: 0.5,
+                    color: Colors.grey[300],
+          ),
+          ListTile(
+            leading: Icon(Icons.video_collection,size: 30,color: Colors.teal[800],),
+            title: Text('Videos',style: TextStyle(color: Colors.black,fontSize:16,),),
+            subtitle: Text("See your videos"),
+            trailing: Icon(Icons.menu),
+            onTap:(){ Navigator.pop(context);},
+          ), 
+           Container(
+                    height: 0.5,
+                    color: Colors.grey[300],
+          ),            
+          ListTile(
+            leading: Icon(Icons.timelapse,size: 30,color: Colors.teal[800],),
+            title: Text('Memories',style: TextStyle(color: Colors.black,fontSize:16,),),
+            subtitle: Text("See your memories"),
+            trailing: Icon(Icons.menu),
+            onTap:(){ Navigator.pop(context);},
+          ),
+           Container(
+                    height: 0.5,
+                    color: Colors.grey[300],
+          ),
+          ListTile(
+            leading: Icon(Icons.save,size: 30,color: Colors.teal[800],),
+            title: Text('Saved',style: TextStyle(color: Colors.black,fontSize:16,),),
+            subtitle: Text("Saved posts"),
+            trailing: Icon(Icons.menu),
+            onTap:(){ Navigator.pop(context);},
+          ),
+           Container(
+                    height: 10,
+                    color: Colors.grey[300],
+          ),
+
+          ListTile(
+            leading: Icon(Icons.settings,size: 30,color: Colors.teal[800],),
+            title: Text('Settings & Privacy',style: TextStyle(color: Colors.black,fontSize:16,),),
+            subtitle: Text("Settings & Privacy Actions"),
+            onTap:(){ Navigator.pop(context);},
+          ),
+          Container(
+                    height: 0.5,
+                    color: Colors.grey[300],
+          ),
+          ListTile(
+            leading: Icon(Icons.help,size: 30,color: Colors.teal[800],),
+            title: Text('Help & Support',style: TextStyle(color: Colors.black,fontSize:16,),),
+            onTap:(){ Navigator.pop(context);},
+          ),
+          Container(
+                    height: 0.5,
+                    color: Colors.grey[300],
+          ),
+
+          Padding(
+            padding: const EdgeInsets.fromLTRB(50,10,50,20),
+            child: Container(
+                      decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),                      
+                      gradient: LinearGradient(
+                      begin: Alignment.topRight,
+                      end: Alignment.bottomLeft,
+                      colors: [
+                      Colors.teal.shade700,
+                      Colors.black,
+                  ],
+                )
+                      ),
+                      // ignore: deprecated_member_use
+                      child: FlatButton(onPressed: (){
+                        Navigator.push(context, 
+                      MaterialPageRoute(builder: (context)=> SplashScreen()));
+                      },
+                       child: Text("Log Out",style: TextStyle(fontSize: 18,color: Colors.white),)),
+            ),
+          ),
+
+
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              height: 30,
+              color: Colors.teal[900],
+              child: Center(child: Text("www.sampleapp.com  |  V 1.0.0",style: TextStyle(color: Colors.white),)),
+            ),
+          )
+           
+                
+              ],),
+
+              
           ),
            body: TabBarView(
             children: [

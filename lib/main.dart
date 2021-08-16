@@ -3,11 +3,17 @@ import 'dart:async';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import "package:flutter/material.dart";
 import 'package:myfirst/login.dart';
-import 'home.dart';
+import 'package:flutter/services.dart';
 
 
 void main(){
   runApp(MyApp());
+   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+     systemNavigationBarColor: Colors.black,
+    statusBarColor: Colors.teal[900],
+    
+    ));
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
 }
 
 class MyApp extends StatelessWidget {
@@ -15,6 +21,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return MaterialApp(
       home: SplashScreen(),
 
@@ -37,7 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(Duration(seconds: 3), ()
     {
       Navigator.push(context, 
-      MaterialPageRoute(builder: (context)=> MyHome()),
+      MaterialPageRoute(builder: (context)=> Login()),
       );
 
     });
@@ -66,7 +73,7 @@ class _SplashScreenState extends State<SplashScreen> {
             children: [
               Text("Welcome To ",style: TextStyle(fontSize: 20.0,color: Colors.white70),),
               SizedBox(height: 10.0,),
-              Text("My First",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 50.0,),),
+              Text("SampleApp",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 50.0,),),
               SizedBox(height: 10.0,),
               Text("Flutter Application",style: TextStyle(fontSize: 15,color: Colors.white70,letterSpacing: 7),),
               SizedBox(height: 40.0,),

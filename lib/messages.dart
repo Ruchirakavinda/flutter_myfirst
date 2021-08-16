@@ -43,7 +43,7 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w","57 m","57 m",];
                      Navigator.pop(context); 
                   } ,),
                 ),
-          title:Center(child: Text("Test Social",style: TextStyle(fontSize: 25.0,),)),
+          title:Center(child: Text("SampleApp",style: TextStyle(fontSize: 25.0,),)),
 
           actions: [
                 Padding(
@@ -65,7 +65,7 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w","57 m","57 m",];
               Container(
               margin: EdgeInsets.fromLTRB(20, 20, 0, 0),
               child:Text(
-              "Masseges",
+              "Messages",
               style: TextStyle(
               fontSize:25.0 ,fontWeight: FontWeight.w700,
               ),
@@ -224,6 +224,15 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w","57 m","57 m",];
 
 
 
+      floatingActionButton: new FloatingActionButton(
+      heroTag: "add",
+      elevation:5,
+      child: new Icon(Icons.add),
+      backgroundColor: Colors.teal[800],
+      onPressed: (){
+       
+      }
+    )
 
           
       

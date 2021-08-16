@@ -6,10 +6,10 @@ class Tab2 extends StatefulWidget {
   const Tab2({ Key? key }) : super(key: key);
 
   @override
-  _tab2State createState() => _tab2State();
+  _Tab2State createState() => _Tab2State();
 }
 
-class _tab2State extends State<Tab2> {
+class _Tab2State extends State<Tab2> {
 
 final GlobalKey<FormState>_form4 =  GlobalKey<FormState>();
 var _connections;
@@ -175,6 +175,7 @@ var text2 = "Show all";
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+                        // ignore: deprecated_member_use
                         FlatButton(
                         onPressed: () {  },
                           child: 
@@ -311,6 +312,7 @@ var text2 = "Show all";
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+                        // ignore: deprecated_member_use
                         FlatButton(
                         onPressed: () {  },
                           child: 

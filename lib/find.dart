@@ -42,13 +42,13 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
                      Navigator.pop(context); 
                   } ,),
                 ),
-          title:Center(child: Text("Test Social",style: TextStyle(fontSize: 25.0,),)),
+          title:Center(child: Text("SampleApp",style: TextStyle(fontSize: 25.0,),)),
 
           actions: [
                 Padding(
                   padding: const EdgeInsets.only(right: 8.0),
                   child: IconButton(
-                  icon:Icon(MdiIcons.send,size: 25.0,color: Colors.white.withOpacity(0.9),), onPressed: () {  } ,),
+                  icon:Icon(MdiIcons.send,size: 25.0,color: Colors.white.withOpacity(0.0),), onPressed: () {  } ,),
                 ),
                 ],
  
@@ -150,20 +150,11 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(20,0,0,0),
+                    padding: const EdgeInsets.fromLTRB(20,20,0,10),
                     child:Text('People you may know', style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700) ,),
                   ),
 
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0,0,0,0),
-                    // ignore: deprecated_member_use
-                    child: FlatButton(
-                    onPressed: () {  },
-                    child: Text('Show all', 
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600) ,)),
-                  ),
+                  
                 ],
               ),
 
@@ -186,6 +177,7 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+                        // ignore: deprecated_member_use
                         FlatButton(
                         onPressed: () {  },
                           child: 

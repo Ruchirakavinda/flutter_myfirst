@@ -55,6 +55,7 @@ flutter:
     - assests/my.jpg
     - assests/couple.jpg
     - assests/ggl.jpg
+    - assests/cover.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
