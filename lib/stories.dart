@@ -13,10 +13,9 @@ class _StoriesState extends State<Stories> {
 final GlobalKey<FormState>_form5 =  GlobalKey<FormState>();
 var _find;
 
-  List name=["Ruchira Kavinda","Mia Andrus","Sunny Lisa","Ruchira Kavinda","Ruchira Kavinda","Ruchira Kavinda","Ruchira Kavinda","Ruchira Kavinda"];
-  List story = ["assests/girl.png","assests/girl.png","assests/my.jpg","assests/girl.png","assests/girl.png","assests/girl.png","assests/girl.png","assests/girl.png"];
-  List img= ["assests/my.jpg","assests/girl.png","assests/girl.png","assests/my.jpg","assests/my.jpg","assests/my.jpg","assests/my.jpg","assests/girl.png"];
-
+   List name=["Jhon Wick","Susan Andrusan","Ruchira Kavinda","Mia Andrus","Sunny Lisa","William Felker"];
+  List users= ["assests/u1.png","assests/u2.jpg","assests/my.jpg","assests/u3.jpg","assests/u4.jpg","assests/u5.jpg"];
+  List img = ["assests/img1.jpg","assests/img2.jpg","assests/img3.jpg","assests/img4.jpeg","assests/img5.jpg","assests/img5.jpg"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -154,7 +153,7 @@ var _find;
                                 image: DecorationImage(
                                    fit: BoxFit.cover,
                                    colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.3), BlendMode.darken),
-                                   image: AssetImage(story[index]),
+                                   image: AssetImage(img[index]),
                                  
                                   ),
                                   
@@ -188,7 +187,7 @@ var _find;
                                     decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     image: DecorationImage(
-                                    image: AssetImage(img[index]),
+                                    image: AssetImage(users[index]),
                                           fit: BoxFit.fill,
                                       ),
                                       boxShadow: [

@@ -14,9 +14,9 @@ class _MsgState extends State<Msg> {
 final GlobalKey<FormState>_form6 =  GlobalKey<FormState>();
 var _msg;
 
-List req=["Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay","Kevin Gande","John Wick","John Wick"];
-List conn=["Mia Andrus","Sunny Lisa","Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay","Kevin Gande","Alon ferdus","Sunny Lisa","Sunny Lisa"];
-List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w","57 m","57 m",];
+List req=["Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay","Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay"];
+List usrs= ["assests/u1.png","assests/u2.jpg","assests/my.jpg","assests/u3.jpg","assests/u4.jpg","assests/u5.jpg","assests/u1.png","assests/u2.jpg","assests/my.jpg","assests/u3.jpg","assests/u4.jpg","assests/u5.jpg"];
+List time=["Just Now","36 m","57 m","12 h","1 d","2 d","Just Now","36 m","57 m","12 h","1 d","2 d"];
 
   @override
   Widget build(BuildContext context) {
@@ -164,7 +164,7 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w","57 m","57 m",];
                           decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                          image: AssetImage("assests/girl.png"),
+                          image: AssetImage(usrs[index]),
                                 fit: BoxFit.fill,
                             ),
                           ),

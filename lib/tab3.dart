@@ -13,9 +13,10 @@ class _Tab3State extends State<Tab3> {
 final GlobalKey<FormState>_form5 =  GlobalKey<FormState>();
 var _notifi;
 
-List req=["Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay","Kevin Gande"];
-List conn=["Mia Andrus","Sunny Lisa","Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay","Kevin Gande","Alon ferdus"];
-List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
+List req=["Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay"];
+List conn=["Mia Andrus","Sunny Lisa","Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick"];
+List time = ["Just Now","36 m","57 m","12 h","1 d","2 d"];
+ List usrs= ["assests/u1.png","assests/u2.jpg","assests/my.jpg","assests/u3.jpg","assests/u4.jpg","assests/u5.jpg"];
 
 
 var heightbox = ["260","null"];
@@ -180,7 +181,7 @@ var text2 = "Show all";
                           decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                          image: AssetImage("assests/girl.png"),
+                          image: AssetImage(usrs[index]),
                                 fit: BoxFit.fill,
                             ),
                           ),
@@ -266,7 +267,7 @@ var text2 = "Show all";
                           decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                          image: AssetImage("assests/girl.png"),
+                          image: AssetImage(usrs[index]),
                                 fit: BoxFit.fill,
                             ),
                           ),
@@ -282,7 +283,7 @@ var text2 = "Show all";
                               child: RichText(
                                   text: TextSpan(
                                     children: <TextSpan>[
-                                      TextSpan(text:req[index], style: TextStyle( color: Colors.black,fontSize: 16,fontWeight: FontWeight.w700)),
+                                      TextSpan(text:conn[index], style: TextStyle( color: Colors.black,fontSize: 16,fontWeight: FontWeight.w700)),
                                       TextSpan(text: ' Reprehenderit ut est id ex commodo.', style: TextStyle( color: Colors.black, fontSize: 16)),
                                     
                                     ],

@@ -11,10 +11,10 @@ class Tab1 extends StatefulWidget {
 
 class _Tab1State extends State<Tab1> {
 
-  List name=["Ruchira Kavinda","Mia Andrus","Sunny Lisa"];
+  List name=["Jhon Wick","Susan Andrusan","Ruchira Kavinda","Mia Andrus","Sunny Lisa","William Felker"];
   List time = ["Just Now","36 m","57 m","12 h","1 d","2 d"];
-  List img= ["assests/my.jpg","assests/girl.png","assests/girl.png"];
-  List story = ["assests/girl.png","assests/girl.png","assests/my.jpg"];
+  List usrs= ["assests/u1.png","assests/u2.jpg","assests/my.jpg","assests/u3.jpg","assests/u4.jpg","assests/u5.jpg"];
+  List img = ["assests/img2.jpg","assests/img1.jpg","assests/img3.jpg","assests/img4.jpeg","assests/img5.jpg","assests/img6.jpg"];
   static const user = 'assests/my.jpg';
 
   final GlobalKey<FormState>_form10 =  GlobalKey<FormState>();
@@ -213,7 +213,7 @@ class _Tab1State extends State<Tab1> {
                           image: DecorationImage(
                              fit: BoxFit.cover,
                              colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.3), BlendMode.darken),
-                             image: AssetImage(story[index]),
+                             image: AssetImage(img[index]),
                            
                             ),
                             
@@ -249,7 +249,7 @@ class _Tab1State extends State<Tab1> {
                               decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               image: DecorationImage(
-                              image: AssetImage(img[index]),
+                              image: AssetImage(usrs[index]),
                                     fit: BoxFit.fill,
                                 ),
                                 boxShadow: [
@@ -297,7 +297,7 @@ class _Tab1State extends State<Tab1> {
                               decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               image: DecorationImage(
-                              image: AssetImage(img[index]),
+                              image: AssetImage(usrs[index]),
                                     fit: BoxFit.fill,
                                 ),
                               ),
@@ -416,7 +416,7 @@ class _Tab1State extends State<Tab1> {
                             Text(time[index]),
                             Padding(
                               padding: const EdgeInsets.fromLTRB(0,10,0,10),
-                              child: Text('I need to make body part scrollable.How can i implement that scroll.',style: TextStyle(fontSize: 16,color: Colors.black),
+                              child: Text('Culpa tempor sunt tempor nostrud cupidatat mollit elit consectetur enim reprehenderit et.',style: TextStyle(fontSize: 16,color: Colors.black),
                                maxLines: 15,
                                softWrap: false,
                                overflow: TextOverflow.ellipsis,
