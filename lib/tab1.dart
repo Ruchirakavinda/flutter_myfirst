@@ -17,7 +17,7 @@ class _Tab1State extends State<Tab1> {
   List story = ["assests/girl.png","assests/girl.png","assests/my.jpg"];
   static const user = 'assests/my.jpg';
 
-  final GlobalKey<FormState>_form5 =  GlobalKey<FormState>();
+  final GlobalKey<FormState>_form10 =  GlobalKey<FormState>();
   var _accounts;
 
 
@@ -69,7 +69,7 @@ class _Tab1State extends State<Tab1> {
               ),
               Container(
               child: Form(
-                key:_form5 ,
+                key:_form10 ,
                 child:Container(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(10,5,10,10),
@@ -89,6 +89,7 @@ class _Tab1State extends State<Tab1> {
                             Padding(
                               padding: const EdgeInsets.fromLTRB(0,0,0,0),
                               child: TextFormField(
+                                autofocus: false,
                                 cursorColor: Colors.white,
                                 style: TextStyle(color: Colors.black54),
                                 decoration: InputDecoration(
@@ -97,8 +98,8 @@ class _Tab1State extends State<Tab1> {
                                     color: Colors.black.withOpacity(0.2),),
                                     suffixIcon: IconButton(
                                     onPressed: (){
-                                       if(_form5.currentState!.validate()){
-                                      _form5.currentState!.save();
+                                       if(_form10.currentState!.validate()){
+                                      _form10.currentState!.save();
                                       print(_accounts);
                                     }
                                     },

@@ -153,7 +153,7 @@ Widget _password() {
 
                
 
-              Text("My First",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 30.0,),),
+              Text("SampleApp",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 30.0,),),
               SizedBox(height: 10.0,),
               Text("Flutter Application",style: TextStyle(fontSize: 15,color: Colors.white70,letterSpacing: 7),),
               SizedBox(height: 40,),
@@ -222,6 +222,7 @@ Widget _password() {
                     fontSize: 18,
                     color: Colors.white),
                     ),
+                    // ignore: deprecated_member_use
                     FlatButton(
                       onPressed: (){
                         Navigator.push(context, 
