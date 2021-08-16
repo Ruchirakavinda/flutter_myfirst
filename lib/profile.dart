@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:myfirst/home.dart';
 
 class Profile extends StatefulWidget {
   const Profile({ Key? key }) : super(key: key);
@@ -16,7 +17,7 @@ var _prof;
 List name=["Jhon Wick","Susan Andrusan","Ruchira Kavinda","Mia Andrus","Sunny Lisa","William Felker"];
 List time = ["Just Now","36 m","57 m","12 h","1 d","2 d"];
 List users= ["assests/u1.png","assests/u2.jpg","assests/my.jpg","assests/u3.jpg","assests/u4.jpg","assests/u5.jpg"];
-List img = ["assests/img1.jpg","assests/img2.jpg","assests/img3.jpg","assests/img4.jpeg","assests/img5.jpg","assests/img5.jpg"];
+List img = ["assests/img2.jpg","assests/img3.jpg","assests/img4.jpeg","assests/img5.jpg","assests/img6.jpg","assests/img1.jpg"];
 static const user = 'assests/my.jpg';
   @override
   Widget build(BuildContext context) {
@@ -364,11 +365,27 @@ static const user = 'assests/my.jpg';
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(0,0,10,0),
+                    padding: const EdgeInsets.fromLTRB(0,0,20,0),
                     // ignore: deprecated_member_use
-                    child: IconButton(onPressed: (){}, 
-                              icon: Icon(Icons.add_box,size: 30,color: Colors.teal[800],)))
-                 
+                    child: Container(
+                               child: DropdownButton<String>(
+                                items: <String>['Friends', 'Friends of Friends','Only me'].map((String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Container(
+                                      child: new Text(value)),
+                                  );
+                                }).toList(),
+                                onChanged: (value) {
+                                 if(value=="Hide post"){
+                                   Navigator.push(context, 
+                                   MaterialPageRoute(builder: (context)=> MyHome()));
+                                 }
+                                },
+                                icon:Icon(Icons.filter_list,size: 30,),
+                            ),
+                             ),
+                  ),
                 ],
               ),
 
@@ -402,9 +419,24 @@ static const user = 'assests/my.jpg';
                             subtitle: Text(time[index]),
                             trailing:Column(
                             children: [
-                              IconButton(
-                                icon:Icon(Icons.more_horiz,size: 35.0,), onPressed: () {  } ,
-                                ),
+                              Container(
+                               child: DropdownButton<String>(
+                                items: <String>['Edit post', 'Hide post','Remove post','Report a problem'].map((String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Container(
+                                      child: new Text(value)),
+                                  );
+                                }).toList(),
+                                onChanged: (value) {
+                                 if(value=="Hide post"){
+                                   Navigator.push(context, 
+                                   MaterialPageRoute(builder: (context)=> MyHome()));
+                                 }
+                                },
+                                icon:Icon(Icons.more_horiz,size: 30,),
+                            ),
+                             )
                               ],
                             ),
                       ),

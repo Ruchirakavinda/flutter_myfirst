@@ -99,7 +99,7 @@ List time=["Just Now","36 m","57 m","12 h","1 d","2 d","Just Now","36 m","57 m",
                                 decoration: InputDecoration(
                                   prefixIcon: Icon(
                                     Icons.person_search,
-                                    color: Colors.black.withOpacity(0.2),),
+                                    color: Colors.black.withOpacity(0.3),),
                                     suffixIcon: IconButton(
                                     onPressed: (){
                                        if(_form6.currentState!.validate()){
@@ -113,7 +113,7 @@ List time=["Just Now","36 m","57 m","12 h","1 d","2 d","Just Now","36 m","57 m",
                                   border: InputBorder.none,
                                   hintText: 'Search for connect...',
                                   hintStyle: TextStyle(
-                                    color: Colors.black.withOpacity(0.2), 
+                                    color: Colors.black.withOpacity(0.3), 
                                     
                                     fontSize: 18),
                                   

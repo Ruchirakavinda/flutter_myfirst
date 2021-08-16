@@ -88,7 +88,7 @@ var text2 = "Show all";
                                 decoration: InputDecoration(
                                   prefixIcon: Icon(
                                     Icons.person_search,
-                                    color: Colors.black.withOpacity(0.2),),
+                                    color: Colors.black.withOpacity(0.3),),
                                     suffixIcon: IconButton(
                                     onPressed: (){
                                        if(_form5.currentState!.validate()){
@@ -102,7 +102,7 @@ var text2 = "Show all";
                                   border: InputBorder.none,
                                   hintText: 'Search connections...',
                                   hintStyle: TextStyle(
-                                    color: Colors.black.withOpacity(0.2), 
+                                    color: Colors.black.withOpacity(0.3), 
                                     
                                     fontSize: 18),
                                   
