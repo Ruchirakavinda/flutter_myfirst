@@ -13,13 +13,11 @@ class _ProfileState extends State<Profile> {
 final GlobalKey<FormState>_form11 =  GlobalKey<FormState>();
 var _prof;
 
- List name=["Ruchira Kavinda","Mia Andrus","Sunny Lisa"];
-  List time = ["Just Now","36 m","57 m","12 h","1 d","2 d"];
-  List img= ["assests/my.jpg","assests/girl.png","assests/girl.png"];
-  List story = ["assests/girl.png","assests/girl.png","assests/my.jpg"];
-List high=["assests/my.jpg","assests/girl.png","assests/my.jpg","assests/girl.png","assests/my.jpg","assests/girl.png",];
+List name=["Jhon Wick","Susan Andrusan","Ruchira Kavinda","Mia Andrus","Sunny Lisa","William Felker"];
+List time = ["Just Now","36 m","57 m","12 h","1 d","2 d"];
+List users= ["assests/u1.png","assests/u2.jpg","assests/my.jpg","assests/u3.jpg","assests/u4.jpg","assests/u5.jpg"];
+List img = ["assests/img1.jpg","assests/img2.jpg","assests/img3.jpg","assests/img4.jpeg","assests/img5.jpg","assests/img5.jpg"];
 static const user = 'assests/my.jpg';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -310,7 +308,7 @@ static const user = 'assests/my.jpg';
                SizedBox(
                 height:130,
                 child: ListView.builder(
-                  itemCount: high.length,
+                  itemCount: img.length,
                   scrollDirection:Axis.horizontal,
                   itemBuilder:(context,index) => Row(
                     children: [
@@ -325,7 +323,7 @@ static const user = 'assests/my.jpg';
                                     decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     image: DecorationImage(
-                                    image: AssetImage(high[index]),
+                                    image: AssetImage(img[index]),
                                           fit: BoxFit.fill,
                                       ),
                                       boxShadow: [

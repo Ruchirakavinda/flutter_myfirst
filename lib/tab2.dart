@@ -14,9 +14,11 @@ class _Tab2State extends State<Tab2> {
 final GlobalKey<FormState>_form4 =  GlobalKey<FormState>();
 var _connections;
 
-List req=["Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay","Kevin Gande"];
-List conn=["Mia Andrus","Sunny Lisa","Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay","Kevin Gande","Alon ferdus"];
-List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
+List req=["Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay"];
+List conn=["Mia Andrus","Sunny Lisa","Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick"];
+List usrs= ["assests/u1.png","assests/u2.jpg","assests/my.jpg","assests/u3.jpg","assests/u4.jpg","assests/u5.jpg"];
+List country=["United States","Sri lanka","Australia","Dubai","Japan","China"];
+List time = ["Just Now","36 m","57 m","12 h","1 d","2 d"];
 
 
 var heightbox = ["260","null"];
@@ -188,7 +190,7 @@ var text2 = "Show all";
                                           decoration: BoxDecoration(
                                           shape: BoxShape.circle,
                                           image: DecorationImage(
-                                          image: AssetImage("assests/girl.png"),
+                                          image: AssetImage(usrs[index]),
                                                 fit: BoxFit.fill,
                                             ),
                                       ),
@@ -202,7 +204,7 @@ var text2 = "Show all";
                                     Text(req[index],
                                     style: TextStyle(fontWeight: FontWeight.w500,fontSize: 17),),
                                    
-                                    Text('United States',
+                                    Text(country[index],
                                     style:TextStyle(color: Colors.black87)),
 
                                     Text(time[index],
@@ -325,7 +327,7 @@ var text2 = "Show all";
                                           decoration: BoxDecoration(
                                           shape: BoxShape.circle,
                                           image: DecorationImage(
-                                          image: AssetImage("assests/girl.png"),
+                                          image: AssetImage(usrs[index]),
                                                 fit: BoxFit.fill,
                                             ),
                                       ),

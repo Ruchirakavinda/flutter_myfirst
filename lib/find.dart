@@ -13,9 +13,9 @@ class _FindState extends State<Find> {
 final GlobalKey<FormState>_form5 =  GlobalKey<FormState>();
 var _find;
 
-List req=["Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay","Kevin Gande"];
-List conn=["Mia Andrus","Sunny Lisa","Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay","Kevin Gande","Alon ferdus"];
-List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
+List req=["Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay","Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay"];
+List usrs= ["assests/u1.png","assests/u2.jpg","assests/my.jpg","assests/u3.jpg","assests/u4.jpg","assests/u5.jpg","assests/u1.png","assests/u2.jpg","assests/my.jpg","assests/u3.jpg","assests/u4.jpg","assests/u5.jpg"];
+List country=["United States","Sri lanka","Australia","Dubai","Japan","China","United States","Sri lanka","Australia","Dubai","Japan","China"];
 
   @override
   Widget build(BuildContext context) {
@@ -190,7 +190,7 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
                                           decoration: BoxDecoration(
                                           shape: BoxShape.circle,
                                           image: DecorationImage(
-                                          image: AssetImage("assests/girl.png"),
+                                          image: AssetImage(usrs[index]),
                                                 fit: BoxFit.fill,
                                             ),
                                       ),
@@ -204,7 +204,7 @@ List time = ["Just Now","36 m","57 m","12 h","1 d","2 d","1 w"];
                                     Text(req[index],
                                     style: TextStyle(fontWeight: FontWeight.w500,fontSize: 17),),
                                    
-                                    Text('United States',
+                                    Text(country[index],
                                     style:TextStyle(color: Colors.black54)),
 
                                     // Text(time[index],
