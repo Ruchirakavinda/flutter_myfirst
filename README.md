@@ -15,38 +15,38 @@ In here, I have developed the front-end of a application using only the flutter 
 <img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/com01.jpg" width="30%">
 
 ## Sign-In Page
-![Screenshot](screenshots/signin.jpg)
+<img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/signin.jpg" width="30%">
 
 ## Sign-Up Page
-![Screenshot](screenshots/signup.jpg)
+<img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/signup.jpg" width="30%">
 
 ## Home Page
-![Screenshot](screenshots/home01.jpg)
+<img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/home01.jpg" width="30%">
 
-![Screenshot](screenshots/home02.jpg)
+<img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/home02.jpg" width="30%">
 
 ## Stories Page
 <img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/story01.jpg" width="30%">
 
 ## Community Page
-![Screenshot](screenshots/com01.jpg)
+<img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/com01.jpg" width="30%">m01.jpg)
 
 ## Fine friends Page
-![Screenshot](screenshots/find01.jpg)
+<img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/find01.jpg" width="30%">
 
 ## Notifications Page
-![Screenshot](screenshots/notifi01.jpg)
+<img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/notifi01.jpg" width="30%">
 
 ## Messages Page
-![Screenshot](screenshots/msg01.jpg)
+<img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/msg01.jpg" width="30%">
 
 ## Drawer
-![Screenshot](screenshots/drawer.jpg)
+<img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/drawer.jpg" width="30%">
 
 ## Profile Page
-![Screenshot](screenshots/prof01.jpg)
+<img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/prof01.jpg" width="30%">
 
-![Screenshot](screenshots/prof02.jpg)
+<img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/prof02.jpg" width="30%">
 
 
 
