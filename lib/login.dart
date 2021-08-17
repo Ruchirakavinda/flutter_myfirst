@@ -34,7 +34,7 @@ Widget _username() {
                       child: Column(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.fromLTRB(0,0,0,5),
+                            padding: const EdgeInsets.fromLTRB(0,0,0,0),
                             child: TextFormField(
                               cursorColor: Colors.white,
                               style: TextStyle(color: Colors.white),
@@ -45,8 +45,7 @@ Widget _username() {
                                 hintText: 'Username',
                                 hintStyle: TextStyle(
                                   color: Colors.white.withOpacity(0.7), 
-                                  fontStyle: FontStyle.italic,
-                                  fontSize: 18),
+                                  fontStyle: FontStyle.italic,),
                                 
                               ),
                               validator: (text){
@@ -89,7 +88,7 @@ Widget _password() {
                       child: Column(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.fromLTRB(0,0,0,5),
+                            padding: const EdgeInsets.fromLTRB(0,0,0,0),
                             child: TextFormField(
                               obscureText: true,
                               cursorColor: Colors.white,
@@ -101,7 +100,7 @@ Widget _password() {
                                 hintStyle: TextStyle(
                                   color: Colors.white.withOpacity(0.7), 
                                   fontStyle: FontStyle.italic,
-                                  fontSize: 18),
+                                  ),
                                 
                               ),
 
@@ -219,7 +218,7 @@ Widget _password() {
                 children: [
                   Text("Already Haven't an Account?",
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 16,
                     color: Colors.white),
                     ),
                     // ignore: deprecated_member_use
@@ -228,7 +227,7 @@ Widget _password() {
                         Navigator.push(context, 
                         MaterialPageRoute(builder: (context)=> Signup()));
                     }, 
-                    child:Text('Sign Up',style: TextStyle(color: Colors.white,fontSize: 18),))
+                    child:Text('Sign Up',style: TextStyle(color: Colors.white,fontSize: 16),))
                 ],
                 ),
 
@@ -264,9 +263,12 @@ Widget _password() {
                                 ),
                               ),
                                 Padding(
-                                padding: const EdgeInsets.fromLTRB(15,15,0,15),
-                                child: Text('Join With Google', style: 
-                                TextStyle(fontSize: 16,color: Colors.white),),
+                                padding: const EdgeInsets.fromLTRB(10,15,0,15),
+                                child: Text('Join with Google',style: TextStyle(fontSize: 16,color: Colors.white),
+                               maxLines: 15,
+                               softWrap: false,
+                               overflow: TextOverflow.ellipsis,
+                              ),
                               ),
                               ],
                             ),

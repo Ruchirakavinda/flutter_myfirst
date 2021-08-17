@@ -14,7 +14,7 @@ class _Tab2State extends State<Tab2> {
 final GlobalKey<FormState>_form4 =  GlobalKey<FormState>();
 var _connections;
 
-List req=["Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay"];
+List req=["Alon ferdus","Sunny \nAndrus","Suzan Lisa","John Wick","Susi \nAnderson","Chreed bay"];
 List conn=["Mia Andrus","Sunny Lisa","Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick"];
 List usrs= ["assests/u1.png","assests/u2.jpg","assests/my.jpg","assests/u3.jpg","assests/u4.jpg","assests/u5.jpg"];
 List country=["United States","Sri lanka","Australia","Dubai","Japan","China"];
@@ -106,7 +106,7 @@ var text2 = "Show all";
                                   hintStyle: TextStyle(
                                     color: Colors.black.withOpacity(0.3), 
                                     
-                                    fontSize: 18),
+                                    fontSize: 16),
                                   
                                 ),
                                 validator: (text){
@@ -202,7 +202,11 @@ var text2 = "Show all";
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(req[index],
-                                    style: TextStyle(fontWeight: FontWeight.w500,fontSize: 17),),
+                                    style: TextStyle(fontWeight: FontWeight.w500,fontSize: 17),
+                                    maxLines: 2,
+                                    softWrap: false,
+                                    overflow: TextOverflow.ellipsis,
+                                    ),
                                    
                                     Text(country[index],
                                     style:TextStyle(color: Colors.black87)),

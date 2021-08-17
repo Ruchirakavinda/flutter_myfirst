@@ -101,26 +101,27 @@ static const user = 'assests/my.jpg';
                          transform: Matrix4.translationValues(0.0, 30.0, 0.0),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.end,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                                 Padding(
-                                  padding: const EdgeInsets.all(10.0),
+                                  padding: const EdgeInsets.all(8.0),
                                   child: Column(
                                     children: [
-                                      Text("Connections",style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.w900),),
+                                      Text("Connections",style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.w900),),
                                       Padding(
-                                        padding: const EdgeInsets.all(8.0),
+                                        padding: const EdgeInsets.all(0.0),
                                         child: Text("256",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w900),),
                                       )
                                     ],
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.all(10.0),
+                                  padding: const EdgeInsets.all(8.0),
                                   child: Column(
                                     children: [
-                                      Text("Posts",style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.w900),),
+                                      Text("Posts",style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.w900),),
                                       Padding(
-                                        padding: const EdgeInsets.all(8.0),
+                                        padding: const EdgeInsets.all(0.0),
                                         child: Text("256",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w900),),
                                       )
                                     ],
@@ -365,25 +366,33 @@ static const user = 'assests/my.jpg';
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(0,0,20,0),
+                    padding: const EdgeInsets.fromLTRB(0,0,10,0),
                     // ignore: deprecated_member_use
                     child: Container(
-                               child: DropdownButton<String>(
-                                items: <String>['Friends', 'Friends of Friends','Only me'].map((String value) {
-                                  return DropdownMenuItem<String>(
-                                    value: value,
-                                    child: Container(
-                                      child: new Text(value)),
-                                  );
-                                }).toList(),
-                                onChanged: (value) {
-                                 if(value=="Hide post"){
-                                   Navigator.push(context, 
-                                   MaterialPageRoute(builder: (context)=> MyHome()));
-                                 }
-                                },
-                                icon:Icon(Icons.filter_list,size: 30,),
-                            ),
+                               child: PopupMenuButton<int>(
+                    icon: Icon(Icons.filter_list),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                    ),
+                    itemBuilder: (context) => [
+                      PopupMenuItem<int>(
+                        value: 0,
+                        child:Text("Friends"),
+                      ),
+                      PopupMenuItem<int>(
+                        value: 1,
+                        child: Text("Friends of friends"),
+                      ),
+                      PopupMenuItem<int>(
+                        value: 2,
+                        child: Text("Only me"),
+                      ),
+                      PopupMenuItem<int>(
+                        value: 3,
+                        child: Text("Archived"),
+                      ),
+                    ],
+                  ),
                              ),
                   ),
                 ],
@@ -420,22 +429,50 @@ static const user = 'assests/my.jpg';
                             trailing:Column(
                             children: [
                               Container(
-                               child: DropdownButton<String>(
-                                items: <String>['Edit post', 'Hide post','Remove post','Report a problem'].map((String value) {
-                                  return DropdownMenuItem<String>(
-                                    value: value,
-                                    child: Container(
-                                      child: new Text(value)),
-                                  );
-                                }).toList(),
-                                onChanged: (value) {
-                                 if(value=="Hide post"){
-                                   Navigator.push(context, 
-                                   MaterialPageRoute(builder: (context)=> MyHome()));
-                                 }
-                                },
-                                icon:Icon(Icons.more_horiz,size: 30,),
-                            ),
+                               child: PopupMenuButton<int>(
+                    icon: Icon(Icons.more_horiz,size: 30,),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                    ),
+                    itemBuilder: (context) => [
+                      PopupMenuItem<int>(
+                        value: 1,
+                        child: Row(
+                          children: [
+                            Icon(Icons.mode_edit,size: 22,),SizedBox(width: 10,),
+                            Text("Edit"),
+                          ],
+                        ),
+                      ),
+                      PopupMenuItem<int>(
+                        value: 1,
+                        child: Row(
+                          children: [
+                            Icon(Icons.delete,size: 22,),SizedBox(width: 10,),
+                            Text("Move to trash"),
+                          ],
+                        ),
+                      ),
+                      PopupMenuItem<int>(
+                        value: 1,
+                        child: Row(
+                          children: [
+                            Icon(Icons.archive,size: 22,),SizedBox(width: 10,),
+                            Text("Archive"),
+                          ],
+                        ),
+                      ),
+                      PopupMenuItem<int>(
+                        value: 1,
+                        child: Row(
+                          children: [
+                            Icon(Icons.save,size: 22,),SizedBox(width: 10,),
+                            Text("Save post"),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                              )
                               ],
                             ),

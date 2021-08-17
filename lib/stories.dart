@@ -105,7 +105,7 @@ var _find;
                                   hintStyle: TextStyle(
                                     color: Colors.black.withOpacity(0.3), 
                                     
-                                    fontSize: 18),
+                                    fontSize: 16),
                                   
                                 ),
                                 validator: (text){
@@ -146,7 +146,7 @@ var _find;
                               children: [
 
                                 Container(
-                                height: 200,
+                                height: MediaQuery.of(context).size.height*0.29,
                                 decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 color: Colors.teal[800],
