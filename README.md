@@ -12,7 +12,7 @@ In here, I have developed the front-end of a application using only the flutter 
 ## Here are some of the screenshots of this UI
 
 ## Welcome Page
-<p width="200px">![Screenshot](screenshots/story01.jpg)</p>
+<img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/com01.jpg" width="50%">
 
 ## Stories Page
 ![Screenshot](screenshots/story01.jpg)
