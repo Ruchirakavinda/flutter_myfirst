@@ -34,7 +34,7 @@ Widget _username() {
                       child: Column(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.fromLTRB(0,0,0,5),
+                            padding: const EdgeInsets.fromLTRB(0,0,0,0),
                             child: TextFormField(
                               cursorColor: Colors.white,
                               style: TextStyle(color: Colors.white),
@@ -45,7 +45,7 @@ Widget _username() {
                                 hintStyle: TextStyle(
                                   color: Colors.white.withOpacity(0.7), 
                                   fontStyle: FontStyle.italic,
-                                  fontSize: 18),
+                                  ),
                                 
                               ),
                               validator: (text){
@@ -88,7 +88,7 @@ Widget _email() {
                       child: Column(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.fromLTRB(0,0,0,5),
+                            padding: const EdgeInsets.fromLTRB(0,0,0,0),
                             child: TextFormField(
                               obscureText: false,
                               cursorColor: Colors.white,
@@ -100,7 +100,7 @@ Widget _email() {
                                 hintStyle: TextStyle(
                                   color: Colors.white.withOpacity(0.7), 
                                   fontStyle: FontStyle.italic,
-                                  fontSize: 18),
+                                  ),
                                 
                               ),
 
@@ -145,7 +145,7 @@ Widget _password() {
                       child: Column(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.fromLTRB(0,0,0,5),
+                            padding: const EdgeInsets.fromLTRB(0,0,0,0),
                             child: TextFormField(
                               obscureText: true,
                               cursorColor: Colors.white,
@@ -157,7 +157,7 @@ Widget _password() {
                                 hintStyle: TextStyle(
                                   color: Colors.white.withOpacity(0.7), 
                                   fontStyle: FontStyle.italic,
-                                  fontSize: 18),
+                                  ),
                                 
                               ),
 
@@ -202,7 +202,7 @@ Widget _compassword() {
                       child: Column(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.fromLTRB(0,0,0,5),
+                            padding: const EdgeInsets.fromLTRB(0,0,0,0),
                             child: TextFormField(
                               
                               obscureText: true,
@@ -215,7 +215,7 @@ Widget _compassword() {
                                 hintStyle: TextStyle(
                                   color: Colors.white.withOpacity(0.7), 
                                   fontStyle: FontStyle.italic,
-                                  fontSize: 18),
+                                  ),
                                 
                               ),
 
@@ -251,7 +251,7 @@ Widget _compassword() {
     return Scaffold(
     body: SingleChildScrollView(
       child: Container(
-        height:MediaQuery.of(context).size.height * 1,
+        
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topRight,
@@ -263,135 +263,138 @@ Widget _compassword() {
           )
         ),
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("SampleApp",style: 
-              TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 30.0,),),
-              SizedBox(height: 10.0,),
-              Text("Flutter Application",style: 
-              TextStyle(fontSize: 15,color: Colors.white70,letterSpacing: 7),),
-              SizedBox(height: 40,),
-    
-              Form(
-                key: _formKey2,
-                child:Column(
-                  children: [
-                    _username(),
-                    _email(),
-                    _password(),
-                    _compassword(),
-                    
-
-                    SizedBox(
-                      height: 30,
-                    ),
-
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(500),
-                            boxShadow: <BoxShadow>[
-                              BoxShadow(
-                                  color: Colors.black.withOpacity(0.2),
-                                  blurRadius: 10,
-                                  offset: Offset(5, 5),
-                                  spreadRadius: 5,
-                              )
-                            ],
-                        ),
-                        child: MaterialButton(
-                          splashColor: Colors.teal,
-                          shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(100)),
-                          color: Colors.white.withOpacity(0.8),
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(60,10,60,10),
-                            child: Text('Sign Up', style: TextStyle(fontSize: 22,color: Colors.black),),
-                          ),
-                          onPressed: (){
-                            if(_formKey2.currentState!.validate()){
-                              _formKey2.currentState!.save();
-                              print(_uname);
-                              print(_mail);
-                              print(_pwd);
-                              print(_compwd);
-
-                            }
-                          },
-                        ),
-                      ),
-                    
-                  ],
-                )
-    
-              ),
-
-              SizedBox(
-                height: 10,
-              ),
-
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("Already Have an Account?",
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.white),
-                    ),
-                    // ignore: deprecated_member_use
-                    FlatButton(
-                      onPressed: (){
-                        Navigator.pop(context);                   
-
-                    }, 
-                    child:Text('Sign In',style: TextStyle(color: Colors.white,fontSize: 18),))
-                ],
-                ),
-
-
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(0,50,0,50),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("SampleApp",style: 
+                TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 30.0,),),
+                SizedBox(height: 10.0,),
+                Text("Flutter Application",style: 
+                TextStyle(fontSize: 15,color: Colors.white70,letterSpacing: 7),),
                 SizedBox(height: 10,),
+    
+                Form(
+                  key: _formKey2,
+                  child:Column(
+                    children: [
+                      _username(),
+                      _email(),
+                      _password(),
+                      _compassword(),
+                      
 
+                      SizedBox(
+                        height: 30,
+                      ),
 
-                 Container(
-                  width: MediaQuery.of(context).size.width*0.55,
-                  child: MaterialButton(
-                    
-                            splashColor: Colors.white,
-                            shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(200)),
-                            color: Colors.blue.withOpacity(0.7),
-                            child: Row(
-                              
-                              children: [
-                                Container(
-                                      width:30.0,
-                                      height:30.0,
-                                      margin: EdgeInsets.fromLTRB(0,0,0,0),
-                                      decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      image: DecorationImage(
-                                      image: AssetImage('assests/ggl.jpg'),
-                                      fit: BoxFit.fill,
-                                  ),
-                                ),
-                              ),
-                                Padding(
-                                padding: const EdgeInsets.fromLTRB(15,15,0,15),
-                                child: Text('Join With Google', style: 
-                                TextStyle(fontSize: 16,color: Colors.white),),
-                              ),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(500),
+                              boxShadow: <BoxShadow>[
+                                BoxShadow(
+                                    color: Colors.black.withOpacity(0.2),
+                                    blurRadius: 10,
+                                    offset: Offset(5, 5),
+                                    spreadRadius: 5,
+                                )
                               ],
+                          ),
+                          child: MaterialButton(
+                            splashColor: Colors.teal,
+                            shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(100)),
+                            color: Colors.white.withOpacity(0.8),
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(60,10,60,10),
+                              child: Text('Sign Up', style: TextStyle(fontSize: 22,color: Colors.black),),
                             ),
                             onPressed: (){
-                              },
-                            
+                              if(_formKey2.currentState!.validate()){
+                                _formKey2.currentState!.save();
+                                print(_uname);
+                                print(_mail);
+                                print(_pwd);
+                                print(_compwd);
+
+                              }
+                            },
                           ),
+                        ),
+                      
+                    ],
+                  )
+    
+                ),
+
+                SizedBox(
+                  height: 10,
                 ),
 
 
-            
-            ],
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Already Have an Account?",
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white),
+                      ),
+                      // ignore: deprecated_member_use
+                      FlatButton(
+                        onPressed: (){
+                          Navigator.pop(context);                   
+
+                      }, 
+                      child:Text('Sign In',style: TextStyle(color: Colors.white,fontSize: 16),))
+                  ],
+                  ),
+
+
+                  SizedBox(height: 10,),
+
+
+                   Container(
+                    width: MediaQuery.of(context).size.width*0.55,
+                    child: MaterialButton(
+                      
+                              splashColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(200)),
+                              color: Colors.blue.withOpacity(0.7),
+                              child: Row(
+                                
+                                children: [
+                                  Container(
+                                        width:30.0,
+                                        height:30.0,
+                                        margin: EdgeInsets.fromLTRB(0,0,0,0),
+                                        decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        image: DecorationImage(
+                                        image: AssetImage('assests/ggl.jpg'),
+                                        fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                ),
+                                  Padding(
+                                  padding: const EdgeInsets.fromLTRB(10,15,0,15),
+                                  child: Text('Join With Google', style: 
+                                  TextStyle(fontSize: 16,color: Colors.white),),
+                                ),
+                                ],
+                              ),
+                              onPressed: (){
+                                },
+                              
+                            ),
+                  ),
+
+
+              
+              ],
+            ),
           ),
         ),
       ),

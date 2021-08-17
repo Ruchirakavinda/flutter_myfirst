@@ -13,7 +13,7 @@ class _FindState extends State<Find> {
 final GlobalKey<FormState>_form5 =  GlobalKey<FormState>();
 var _find;
 
-List req=["Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay","Alon ferdus","Sunny Andrus","Suzan Lisa","John Wick","Susi Anderson","Chreed bay"];
+List req=["Alon \nferdus","Sunny \nAndrus","Suzan Lisa","John Wick","Susi \nAnderson","Chreed bay","Alon \nferdus","Sunny \nAndrus","Suzan Lisa","John Wick","Susi \nAnderson","Chreed bay"];
 List usrs= ["assests/u1.png","assests/u2.jpg","assests/my.jpg","assests/u3.jpg","assests/u4.jpg","assests/u5.jpg","assests/u1.png","assests/u2.jpg","assests/my.jpg","assests/u3.jpg","assests/u4.jpg","assests/u5.jpg"];
 List country=["United States","Sri lanka","Australia","Dubai","Japan","China","United States","Sri lanka","Australia","Dubai","Japan","China"];
 
@@ -113,7 +113,7 @@ List country=["United States","Sri lanka","Australia","Dubai","Japan","China","U
                                   hintStyle: TextStyle(
                                     color: Colors.black.withOpacity(0.3), 
                                     
-                                    fontSize: 18),
+                                    fontSize: 16),
                                   
                                 ),
                                 validator: (text){

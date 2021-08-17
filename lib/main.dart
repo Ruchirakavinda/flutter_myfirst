@@ -13,7 +13,6 @@ void main(){
     statusBarColor: Colors.teal[900],
     
     ));
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
 }
 
 class MyApp extends StatelessWidget {
@@ -23,6 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: SplashScreen(),
 
     );

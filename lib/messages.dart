@@ -115,7 +115,7 @@ List time=["Just Now","36 m","57 m","12 h","1 d","2 d","Just Now","36 m","57 m",
                                   hintStyle: TextStyle(
                                     color: Colors.black.withOpacity(0.3), 
                                     
-                                    fontSize: 18),
+                                    fontSize: 16),
                                   
                                 ),
                                 validator: (text){

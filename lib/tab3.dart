@@ -104,7 +104,7 @@ var text2 = "Show all";
                                   hintStyle: TextStyle(
                                     color: Colors.black.withOpacity(0.3), 
                                     
-                                    fontSize: 18),
+                                    fontSize: 16),
                                   
                                 ),
                                 validator: (text){
@@ -140,7 +140,7 @@ var text2 = "Show all";
                 children: [
                   Padding(
                     padding: const EdgeInsets.fromLTRB(20,0,0,0),
-                    child:Text("Recent", style: TextStyle(fontSize: 18,fontWeight: FontWeight.w700) ,),
+                    child:Text("Recent", style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700) ,),
                   ),
 
                   Padding(

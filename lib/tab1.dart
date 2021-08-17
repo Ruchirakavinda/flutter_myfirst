@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:myfirst/messages.dart';
 import 'package:myfirst/stories.dart';
 
 class Tab1 extends StatefulWidget {
@@ -16,6 +17,16 @@ class _Tab1State extends State<Tab1> {
   List usrs= ["assests/u1.png","assests/u2.jpg","assests/my.jpg","assests/u3.jpg","assests/u4.jpg","assests/u5.jpg"];
   List img = ["assests/img2.jpg","assests/img1.jpg","assests/img3.jpg","assests/img4.jpeg","assests/img5.jpg","assests/img6.jpg"];
   static const user = 'assests/my.jpg';
+
+
+  void handleClick(int item) {
+  switch (item) {
+    case 3:
+       Navigator.push(context, 
+       MaterialPageRoute(builder: (context)=> Msg()));
+       break;
+  }
+}
 
   final GlobalKey<FormState>_form10 =  GlobalKey<FormState>();
   var _accounts;
@@ -111,7 +122,7 @@ class _Tab1State extends State<Tab1> {
                                   hintStyle: TextStyle(
                                     color: Colors.black.withOpacity(0.3), 
                                     
-                                    fontSize: 18),
+                                    fontSize: 16),
                                   
                                 ),
                                 validator: (text){
@@ -287,21 +298,32 @@ class _Tab1State extends State<Tab1> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0,0,10,0),
                     // ignore: deprecated_member_use
-                    child: Container(
-                               child: DropdownButton<String>(
-                                items: <String>['Friends', 'Friends of Friends','Only me'].map((String value) {
-                                  return DropdownMenuItem<String>(
-                                    value: value,
-                                    child: Container(
-                                      child: new Text(value)),
-                                  );
-                                }).toList(),
-                                onChanged: (value) {
-                                
-                                },
-                                icon:Icon(Icons.filter_list,size: 30,),
-                            ),
-                             ),
+                    child:  PopupMenuButton<int>(
+                    icon: Icon(Icons.filter_list),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                    ),
+                    onSelected: (item) => handleClick(item),
+                    itemBuilder: (context) => [
+                      PopupMenuItem<int>(
+                        value: 0,
+                        child:Text("Friends"),
+                      ),
+                      PopupMenuItem<int>(
+                        value: 1,
+                        child: Text("Friends of friends"),
+                      ),
+                      PopupMenuItem<int>(
+                        value: 2,
+                        child: Text("Only me"),
+                      ),
+                      PopupMenuItem<int>(
+                        value: 3,
+                        child: Text("Archived"),
+                      ),
+                    ],
+                  ),
+                        
                   ),
                 ],
               ),
@@ -340,22 +362,51 @@ class _Tab1State extends State<Tab1> {
                             trailing:Column(
                             children: [
                              Container(
-                               child: DropdownButton<String>(
-                                items: <String>['Save post', 'Hide post','Report a problem'].map((String value) {
-                                  return DropdownMenuItem<String>(
-                                    value: value,
-                                    child: Container(
-                                      child: new Text(value)),
-                                  );
-                                }).toList(),
-                                onChanged: (value) {
-                                 if(value=="Hide post"){
-                                   Navigator.push(context, 
-                                   MaterialPageRoute(builder: (context)=> Stories()));
-                                 }
-                                },
-                                icon:Icon(Icons.more_horiz,size: 30,),
-                            ),
+                               child: PopupMenuButton<int>(
+                    icon: Icon(Icons.more_horiz,size: 30,),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                    ),
+                    onSelected: (item) => handleClick(item),
+                    itemBuilder: (context) => [
+                      PopupMenuItem<int>(
+                        value: 1,
+                        child: Row(
+                          children: [
+                            Icon(Icons.save,size: 22,),SizedBox(width: 10,),
+                            Text("Save post"),
+                          ],
+                        ),
+                      ),
+                      PopupMenuItem<int>(
+                        value: 1,
+                        child: Row(
+                          children: [
+                            Icon(Icons.hide_image,size: 22,),SizedBox(width: 10,),
+                            Text("Hide post"),
+                          ],
+                        ),
+                      ),
+                      PopupMenuItem<int>(
+                        value: 1,
+                        child: Row(
+                          children: [
+                            Icon(Icons.notifications_off,size: 22,),SizedBox(width: 10,),
+                            Text("Turn off notifications"),
+                          ],
+                        ),
+                      ),
+                      PopupMenuItem<int>(
+                        value: 1,
+                        child: Row(
+                          children: [
+                            Icon(Icons.report,size: 22,),SizedBox(width: 10,),
+                            Text("Report"),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                              )
                               ],
                             ),

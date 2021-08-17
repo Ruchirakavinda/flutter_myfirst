@@ -138,7 +138,7 @@ class _MyHomeState extends State<MyHome> {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(0,0,0,10),
                         child: ListTile(
-                          title: Text('Ruchira Kavinda', style: TextStyle(color: Colors.white,fontSize:18,),),
+                          title: Text('Ruchira Kavinda', style: TextStyle(color: Colors.white,fontSize: 16,),),
                           subtitle: Text("ruchirakvnd@gmail.com",style: TextStyle(color: Colors.white,fontSize:16,),),
                         ),
                       ),
@@ -244,7 +244,7 @@ class _MyHomeState extends State<MyHome> {
                         Navigator.push(context, 
                       MaterialPageRoute(builder: (context)=> SplashScreen()));
                       },
-                       child: Text("Log Out",style: TextStyle(fontSize: 18,color: Colors.white),)),
+                       child: Text("Log Out",style: TextStyle(fontSize: 16,color: Colors.white),)),
             ),
           ),
 
@@ -375,7 +375,7 @@ class _MyHomeState extends State<MyHome> {
 //                       Padding(
 //                         padding: const EdgeInsets.fromLTRB(10, 10, 0,0),
 //                         child: Text("Ruchira Kavinda",style: TextStyle(
-//                           fontSize:18.0 ,fontWeight: FontWeight.w700,)),
+//                           fontSize: 16.0 ,fontWeight: FontWeight.w700,)),
 //                       ),
 //                       Padding(
 //                         padding: const EdgeInsets.fromLTRB(10, 0, 0,0),
@@ -584,7 +584,7 @@ class _MyHomeState extends State<MyHome> {
 //                       Padding(
 //                         padding: const EdgeInsets.fromLTRB(10, 10, 0,0),
 //                         child: Text("Mia lisa",style: TextStyle(
-//                           fontSize:18.0 ,fontWeight: FontWeight.w700,)),
+//                           fontSize: 16.0 ,fontWeight: FontWeight.w700,)),
 //                       ),
 //                       Padding(
 //                         padding: const EdgeInsets.fromLTRB(10, 0, 0,0),
@@ -774,7 +774,7 @@ class _MyHomeState extends State<MyHome> {
 //                       Padding(
 //                         padding: const EdgeInsets.fromLTRB(10, 10, 0,0),
 //                         child: Text("Sunny aleska",style: TextStyle(
-//                           fontSize:18.0 ,fontWeight: FontWeight.w700,)),
+//                           fontSize: 16.0 ,fontWeight: FontWeight.w700,)),
 //                       ),
 //                       Padding(
 //                         padding: const EdgeInsets.fromLTRB(10, 0, 0,0),
