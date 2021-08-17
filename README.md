@@ -12,10 +12,7 @@ In here, I have developed the front-end of a application using only the flutter 
 ## Here are some of the screenshots of this UI
 
 ## Welcome Page
-<img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/com01.jpg" width="50%">
-
-## Stories Page
-![Screenshot](screenshots/story01.jpg)
+<img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/com01.jpg" width="30%">
 
 ## Sign-In Page
 ![Screenshot](screenshots/signin.jpg)
@@ -27,6 +24,9 @@ In here, I have developed the front-end of a application using only the flutter 
 ![Screenshot](screenshots/home01.jpg)
 
 ![Screenshot](screenshots/home02.jpg)
+
+## Stories Page
+<img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/story01.jpg" width="30%">
 
 ## Community Page
 ![Screenshot](screenshots/com01.jpg)
