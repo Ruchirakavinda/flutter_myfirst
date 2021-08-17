@@ -40,11 +40,11 @@ In here, I have developed the front-end of a application using only the flutter 
 <br>
 
 ## Community Page
-<img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/com01.jpg" width="30%">m01.jpg)
+<img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/com01.jpg" width="30%">
 <br>
 <br>
 
-## Fine friends Page
+## Find friends Page
 <img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/find01.jpg" width="30%">
 <br>
 <br>
