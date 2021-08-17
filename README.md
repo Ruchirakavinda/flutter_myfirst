@@ -28,7 +28,8 @@ In here, I have developed the front-end of a application using only the flutter 
 
 ## Home Page
 <img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/home01.jpg" width="30%">
-
+<br>
+<br>
 <img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/home02.jpg" width="30%">
 <br>
 <br>
@@ -65,7 +66,8 @@ In here, I have developed the front-end of a application using only the flutter 
 
 ## Profile Page
 <img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/prof01.jpg" width="30%">
-
+<br>
+<br>
 <img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/prof02.jpg" width="30%">
 <br>
 <br>
