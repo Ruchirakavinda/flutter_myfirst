@@ -9,10 +9,12 @@ In here, I have developed the front-end of a application using only the flutter 
 <p>If you want to contribute to this projrct, you can send a pull request.</p>
 
 
-## Here are some of the screenshots of this UI
+## Here are some of the screenshots of user interface
 
 ## Welcome Page
 <img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/com01.jpg" width="30%">
+<br>
+<br>
 
 ## Sign-In Page
 <img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/signin.jpg" width="30%">
