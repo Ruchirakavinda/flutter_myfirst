@@ -12,7 +12,7 @@ In here, I have developed the front-end of a application using only the flutter 
 ## Here are some of the screenshots of this UI
 
 ## Welcome Page
-![Screenshot](screenshots/welcome.jpg {width=40px height=400px})
+![Screenshot](screenshots/welcome.jpg = 250x)
 
 ## Stories Page
 ![Screenshot](screenshots/story01.jpg)
