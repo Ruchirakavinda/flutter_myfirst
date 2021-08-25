@@ -12,13 +12,8 @@ In here, I have developed the front-end of a application using only the flutter 
 ## Here are some of the screenshots of user interface
 
 ## Welcome Page
-.example img {
-	width: 30%;	
-	border: 1px solid #333;	
-	box-shadow: 2px 2px 5px #999;
-	border-radius: 5px;
-}
-<div class="example">
+
+<div style="box-shadow: 2px 2px 5px #999;">
  <img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/welcome.jpg" width="30%">
 </div>
 <img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/welcome.jpg" width="30%" >
