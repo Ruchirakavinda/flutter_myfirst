@@ -12,11 +12,7 @@ In here, I have developed the front-end of a application using only the flutter 
 ## Here are some of the screenshots of user interface
 
 ## Welcome Page
-
-<div style="box-shadow: 2px 2px 5px #999;">
- <img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/welcome.jpg" width="30%">
-</div>
-<img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/welcome.jpg" width="30%" >
+<img src = "https://github.com/Ruchirakavinda/flutter_myfirst/blob/main/screenshots/welcome.jpg" width="30%" style="box-shadow: 10px 10px 10px #ffff;" >
 <br>
 <br>
 
