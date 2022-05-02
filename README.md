@@ -6,7 +6,7 @@
 
 <p>This project is a starting point for a my Flutter application development.
 In here, I have developed the front-end of a application using only the flutter basic widgets and in-built functions.</p>
-<p>If you want to contribute to this projrct, you can send a pull request.</p>
+<p>If you are willing to contribute to this projrct, please send a pull request.</p>
 
 
 ## Here are some of the screenshots of user interface
